@@ -1,0 +1,74 @@
+.topic-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.topic-sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  font-family: "Poppins";
+  margin-top: 50px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-container p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.left-container img {
+  width: 240px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.buttons-container button {
+  border: solid 2px #0075b2;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: white;
+  font-family: "Poppins";
+  color: #0075b2;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  margin-right: 20px;
+}
+
+.buttons-container button:hover {
+  color: white;
+  background-color: #0075b2;
+  border: solid 2px #0075b2;
+}
+
+.right-pic {
+  height: 220px;
+  width: 350px;
+  align-self: flex-start;
+  margin-left: 50px;
+}
+
+.bottom-content-container {
+  margin-top: 50px;
+}
+
+.buttons-container button.selectedCat {
+  color: white;
+  background-color: #0075b2;
+}

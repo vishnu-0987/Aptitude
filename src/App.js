@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LogicalReasoning from "./components/LogicalReasoning";
+import TopicPage from "./components/TopicPage";
+import NotFound from "./components/NotFound";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LogicalReasoning />} />
+      <Route path="/topic/:topic" element={<TopicPage />} />
+      <Route element={<NotFound />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;

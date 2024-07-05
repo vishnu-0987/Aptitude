@@ -1,0 +1,26 @@
+.table {
+  border: solid 1px black;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.formuale-container {
+  margin-bottom: 50px;
+}
+
+.formuale-container h1 {
+  font-weight: 600;
+  font-size: 29px;
+  margin-bottom: 5px;
+}
