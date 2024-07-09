@@ -60,8 +60,11 @@
 .right-pic {
   height: 220px;
   width: 350px;
-  align-self: flex-start;
+  top: 100px;
+  right: 40px;
+  position: sticky;
   margin-left: 50px;
+  align-self: flex-start;
 }
 
 .bottom-content-container {

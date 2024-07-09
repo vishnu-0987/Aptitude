@@ -19,11 +19,32 @@ const topicDescription = {
     "Order and ranking refer to the arrangement or placement of items, entities, or individuals based on a specific criterion or criteria. It involves organizing elements in a particular sequence or assigning them relative positions to establish a hierarchy or precedence. This concept is widely used in various fields, including education, where students may be ranked based on academic performance, and sports, where teams or athletes are ranked according to their achievements or scores.",
   "statement-and-argument":
     "Statement and argument are fundamental components of logical reasoning and critical thinking. A statement is an assertion or claim that presents a fact, opinion, or proposition, while an argument is a set of statements that provide evidence or reasoning to support or refute a claim. In logical reasoning, evaluating statements and arguments involves analyzing the validity, strength, and relevance of the presented information.",
+  "series-completion":
+    "Series completion involves identifying the pattern or rule that governs a sequence of elements and using it to determine the next element in the series. This type of problem requires logical reasoning, pattern recognition, and analytical skills. Series completion questions can involve numbers, letters, symbols, or a combination of these elements.",
+  "letter-and-symbol-series":
+    "Letter and symbol series problems involve sequences of letters and/or symbols that follow a specific pattern or rule. The task is to identify the pattern and determine the next element in the series. These problems test the ability to recognize and apply logical rules and patterns involving alphabetical and symbolic sequences.",
+  "number-series":
+    "Number series problems involve sequences of numbers that follow a specific mathematical pattern or rule. The task is to identify the pattern and determine the next number in the series. These problems test numerical reasoning, pattern recognition, and mathematical skills.",
+  "making-judgements":
+    "Making judgments involves evaluating information, situations, or arguments to form an opinion or conclusion. This process requires critical thinking, logical reasoning, and the ability to assess the validity and relevance of the presented information. Judgments are often based on a combination of factual evidence and subjective interpretation.",
+  "analyzing-arguments":
+    "Analyzing arguments involves examining the structure, validity, and strength of arguments presented in a text or discussion. This process requires identifying the main claim, supporting evidence, and logical reasoning used to support or refute the claim. Analyzing arguments is essential for critical thinking and effective decision-making.",
+  "statement-and-assumption":
+    "Statement and assumption problems involve identifying the underlying assumptions that support a given statement. An assumption is an unstated premise that is taken for granted. These problems test the ability to recognize implicit information and evaluate the logical foundation of statements.",
+  "course-of-action":
+    "Course of action problems involve evaluating a situation and determining the best course of action to address it. This process requires logical reasoning, problem-solving skills, and the ability to consider the potential outcomes and consequences of different actions. Course of action questions are often used in decision-making and management contexts.",
+  "statement-and-conclusion":
+    "Statement and conclusion problems involve determining whether a given conclusion logically follows from a set of statements. This process requires analyzing the relationship between the statements and the conclusion, and evaluating the logical validity of the inference. These problems test deductive reasoning and critical thinking skills.",
+  "cause-and-effect":
+    "Cause and effect problems involve identifying the relationship between two events or phenomena, where one is the cause and the other is the effect. This process requires understanding the logical connection between events and analyzing the factors that contribute to the observed outcome. Cause and effect questions test analytical reasoning and the ability to recognize causal relationships.",
+  "theme-detection":
+    "Theme detection involves identifying the central theme or main idea in a text or set of statements. This process requires the ability to synthesize information, recognize patterns, and understand the overarching message or concept. Theme detection is essential for reading comprehension, critical analysis, and effective communication.",
 };
 
 const TopicPage = () => {
   const { topic } = useParams();
   const [selected, setSelected] = useState("real-life");
+  window.scrollTo(0, 0);
 
   const renderBottom = () => {
     switch (selected) {
@@ -56,17 +77,15 @@ const TopicPage = () => {
             >
               Concepts
             </button>
-            {topic !== "odd-man-out" &&
-              topic !== "statement-and-argument" &&
-              topic !== "logical-problems" && (
-                <button
-                  type="button"
-                  onClick={() => setSelected("formulaes")}
-                  className={`${selected === "formulaes" ? "selectedCat" : ""}`}
-                >
-                  Formulaes
-                </button>
-              )}
+            {(topic === "clock" || topic === "calender") && (
+              <button
+                type="button"
+                onClick={() => setSelected("formulaes")}
+                className={`${selected === "formulaes" ? "selectedCat" : ""}`}
+              >
+                Formulaes
+              </button>
+            )}
 
             <button
               type="button"

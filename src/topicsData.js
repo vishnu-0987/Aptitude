@@ -739,6 +739,1062 @@ const topicsData = {
       },
     ],
   },
+  "order-and-ranking": {
+    description:
+      "Order and ranking refer to the arrangement or placement of items, entities, or individuals based on a specific criterion or criteria...",
+    realLife: [
+      {
+        id: 1,
+        title: "Sports Tournaments",
+        content:
+          "Order and ranking play a significant role in sports tournaments, such as leagues or championships. Teams or individuals are ranked based on their performance, points, or statistics. The order and ranking determine the matchups, fixtures, and progression of the tournament, ultimately leading to the determination of the winner.",
+      },
+      {
+        id: 2,
+        title: "Academic Grading",
+        content:
+          "In education, order and ranking are commonly used for academic grading. Students' performance is assessed and ranked based on their scores, assignments, exams, or other criteria. The order and ranking of students help determine their standing or position relative to their peers.",
+      },
+      {
+        id: 3,
+        title: "Employment and Promotions",
+        content:
+          "Order and ranking are also relevant in the context of employment and promotions. Companies often evaluate employees based on their performance, skills, experience, or other factors. The order and ranking allow employers to identify high-performing individuals, recognize their contributions, and make decisions regarding promotions, salary increases, or other career advancements.",
+      },
+    ],
+    concepts: {
+      des: "Order and ranking refer to the arrangement and relative positioning of items or individuals based on certain criteria or attributes. It involves assigning a specific order or rank to each element in a set, allowing for comparisons and determining their relative positions within that set.The concepts of order and ranking are widely applicable in various fields, including mathematics, statistics, competitions, and organizational structures.Here are some of the important order and ranking concepts:",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Ascending and Descending Order",
+          content:
+            "The first concept revolves around arranging elements in either ascending or descending order. Ascending order refers to arranging items from the smallest or lowest value to the largest or highest value.",
+        },
+        {
+          id: 2,
+          title: "Rank and Position",
+          content:
+            "The second concept focuses on assigning a specific rank or position to each element within a set. Rank represents the relative position of an item compared to others in terms of a specific criterion.",
+        },
+        {
+          id: 3,
+          title: "Relative Comparison",
+          content:
+            "The third concept involves making relative comparisons between different elements based on their order or rank. It allows us to analyze the relationships and distinctions among the items within a set.",
+        },
+        {
+          id: 4,
+          title: "Ties and Fractional Ranking",
+          content:
+            "The fourth concept addresses situations where two or more items have the same value or score, resulting in a tie. In such cases, fractional ranking can be applied, where the ranks of the tied items are averaged.",
+        },
+        {
+          id: 5,
+          title: "Multiple Criteria Ranking",
+          content:
+            "The fifth concept involves considering multiple criteria to determine the ranking or order of items. It takes into account various attributes or factors and assigns ranks accordingly.",
+        },
+      ],
+    },
+    formulae: "Order and Ranking formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "If John ranks 12th from the top in a class of 50 students, what is his rank from the bottom?",
+        options: ["38th", "39th", "40th", "41st"],
+        correctAnswer: "39th",
+      },
+      {
+        id: 2,
+        question:
+          "If Jane ranks 8th from the bottom in a group of 25 students, what is her rank from the top?",
+        options: ["16th", "17th", "18th", "19th"],
+        correctAnswer: "18th",
+      },
+      {
+        id: 3,
+        question:
+          "In a race of 10 participants, if Amy finishes 2nd and Ben finishes 5th, how many participants finish between them?",
+        options: ["2", "3", "4", "5"],
+        correctAnswer: "2",
+      },
+      {
+        id: 4,
+        question:
+          "If Kevin is ranked 15th from the top and 10th from the bottom in a competition, how many participants are there?",
+        options: ["24", "25", "26", "27"],
+        correctAnswer: "24",
+      },
+      {
+        id: 5,
+        question:
+          "In a class of 30 students, if Sarah is ranked 3rd and Lisa is ranked 28th, how many students are between them?",
+        options: ["24", "25", "26", "27"],
+        correctAnswer: "24",
+      },
+      {
+        id: 6,
+        question:
+          "If Paul is ranked 6th from the top in a list of 20, what is his rank from the bottom?",
+        options: ["14th", "15th", "16th", "17th"],
+        correctAnswer: "15th",
+      },
+      {
+        id: 7,
+        question:
+          "In a row of 50 students, if Peter is 20th from the left, what is his position from the right?",
+        options: ["29th", "30th", "31st", "32nd"],
+        correctAnswer: "31st",
+      },
+      {
+        id: 8,
+        question:
+          "If Mary is ranked 10th in a class of 40 students, how many students are ranked below her?",
+        options: ["29", "30", "31", "32"],
+        correctAnswer: "30",
+      },
+      {
+        id: 9,
+        question:
+          "In a group of 35 students, if Tom is ranked 5th from the top, what is his rank from the bottom?",
+        options: ["30th", "31st", "32nd", "33rd"],
+        correctAnswer: "31st",
+      },
+      {
+        id: 10,
+        question:
+          "If Anna is ranked 8th from the bottom in a class of 45 students, what is her rank from the top?",
+        options: ["36th", "37th", "38th", "39th"],
+        correctAnswer: "38th",
+      },
+    ],
+  },
+  "series-completion": {
+    description:
+      "Series completion involves identifying the pattern in a sequence of numbers, letters, or symbols to determine the next item in the series...",
+    realLife: [
+      {
+        id: 1,
+        title: "Financial Forecasting",
+        content:
+          "Analysts use series completion to predict future financial trends based on historical data.",
+      },
+      {
+        id: 2,
+        title: "Weather Prediction",
+        content:
+          "Meteorologists analyze weather patterns to forecast future conditions, often using series completion techniques.",
+      },
+      {
+        id: 3,
+        title: "Inventory Management",
+        content:
+          "Businesses use series completion to predict inventory needs based on past sales patterns.",
+      },
+    ],
+    concepts: {
+      des: "Series completion is a critical skill in pattern recognition and problem-solving. It involves identifying the underlying rule or pattern governing a series...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Arithmetic Series",
+          content:
+            "An arithmetic series involves a sequence of numbers with a constant difference between consecutive terms.",
+        },
+        {
+          id: 2,
+          title: "Geometric Series",
+          content:
+            "A geometric series involves a sequence of numbers where each term is a fixed multiple of the previous term.",
+        },
+        {
+          id: 3,
+          title: "Mixed Series",
+          content:
+            "A mixed series combines different types of patterns, such as alternating arithmetic and geometric sequences.",
+        },
+      ],
+    },
+    formulae: "Series Completion formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question: "Find the next number in the series: 2, 4, 8, 16, ?",
+        options: ["32", "20", "18", "12"],
+        correctAnswer: "32",
+      },
+      {
+        id: 2,
+        question: "Find the missing number: 5, 10, 20, 40, ?",
+        options: ["80", "60", "50", "30"],
+        correctAnswer: "80",
+      },
+      {
+        id: 3,
+        question: "Complete the series: 3, 9, 27, 81, ?",
+        options: ["243", "162", "90", "54"],
+        correctAnswer: "243",
+      },
+      {
+        id: 4,
+        question: "Find the next term: 7, 14, 28, 56, ?",
+        options: ["112", "84", "60", "40"],
+        correctAnswer: "112",
+      },
+      {
+        id: 5,
+        question: "Complete the series: 4, 8, 16, 32, ?",
+        options: ["64", "48", "36", "24"],
+        correctAnswer: "64",
+      },
+      {
+        id: 6,
+        question: "Find the missing number: 6, 12, 24, 48, ?",
+        options: ["96", "84", "60", "54"],
+        correctAnswer: "96",
+      },
+      {
+        id: 7,
+        question: "Complete the series: 1, 2, 4, 8, ?",
+        options: ["16", "12", "10", "6"],
+        correctAnswer: "16",
+      },
+      {
+        id: 8,
+        question: "Find the next term: 11, 22, 44, 88, ?",
+        options: ["176", "120", "100", "64"],
+        correctAnswer: "176",
+      },
+      {
+        id: 9,
+        question: "Complete the series: 5, 15, 45, 135, ?",
+        options: ["405", "200", "150", "75"],
+        correctAnswer: "405",
+      },
+      {
+        id: 10,
+        question: "Find the next number: 8, 16, 32, 64, ?",
+        options: ["128", "80", "70", "50"],
+        correctAnswer: "128",
+      },
+    ],
+  },
+  "letter-and-symbol-series": {
+    description:
+      "Letter and symbol series involve identifying patterns in sequences of letters or symbols to determine the next item...",
+    realLife: [
+      {
+        id: 1,
+        title: "Cryptography",
+        content:
+          "In cryptography, understanding letter and symbol series can help in decoding messages.",
+      },
+      {
+        id: 2,
+        title: "Data Encoding",
+        content:
+          "Data encoding techniques often involve patterns of letters and symbols for efficient information storage and transmission.",
+      },
+      {
+        id: 3,
+        title: "Pattern Recognition",
+        content:
+          "Pattern recognition in AI and machine learning involves identifying sequences and patterns in data.",
+      },
+    ],
+    concepts: {
+      des: "Letter and symbol series require recognizing and extending patterns based on specific rules governing sequences of letters or symbols...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Alphabet Series",
+          content:
+            "Alphabet series involve sequences of letters with a specific pattern, such as alphabetical order or skipping certain letters.",
+        },
+        {
+          id: 2,
+          title: "Symbol Series",
+          content:
+            "Symbol series involve sequences of symbols following a specific pattern or rule.",
+        },
+        {
+          id: 3,
+          title: "Complex Patterns",
+          content:
+            "Complex patterns may involve a combination of letters, symbols, and numbers in a sequence.",
+        },
+      ],
+    },
+    formulae: "Letter and Symbol Series formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question: "Find the next letter in the series: A, C, E, G, ?",
+        options: ["I", "H", "J", "K"],
+        correctAnswer: "I",
+      },
+      {
+        id: 2,
+        question: "Complete the series: P, R, T, V, ?",
+        options: ["X", "U", "W", "Y"],
+        correctAnswer: "X",
+      },
+      {
+        id: 3,
+        question: "Find the missing letter: B, D, F, H, ?",
+        options: ["J", "I", "K", "L"],
+        correctAnswer: "J",
+      },
+      {
+        id: 4,
+        question: "Complete the series: Z, X, V, T, ?",
+        options: ["R", "S", "U", "Q"],
+        correctAnswer: "R",
+      },
+      {
+        id: 5,
+        question: "Find the next symbol in the series: @, #, $, %, ?",
+        options: ["&", "!", "*", "+"],
+        correctAnswer: "&",
+      },
+      {
+        id: 6,
+        question: "Complete the series: *, &, %, @, ?",
+        options: ["#", "$", "!", "+"],
+        correctAnswer: "#",
+      },
+      {
+        id: 7,
+        question: "Find the missing symbol: ^, *, &, %, ?",
+        options: ["$", "#", "!", "+"],
+        correctAnswer: "$",
+      },
+      {
+        id: 8,
+        question: "Complete the series: !, @, #, $, ?",
+        options: ["%", "^", "&", "*"],
+        correctAnswer: "%",
+      },
+      {
+        id: 9,
+        question: "Find the next letter: C, F, I, L, ?",
+        options: ["O", "M", "P", "N"],
+        correctAnswer: "O",
+      },
+      {
+        id: 10,
+        question: "Complete the series: M, Q, U, Y, ?",
+        options: ["C", "A", "B", "D"],
+        correctAnswer: "C",
+      },
+    ],
+  },
+  "number-series": {
+    description:
+      "Number series involve identifying patterns in sequences of numbers to determine the next item...",
+    realLife: [
+      {
+        id: 1,
+        title: "Financial Analysis",
+        content:
+          "In finance, analysts use number series to predict future trends based on historical data.",
+      },
+      {
+        id: 2,
+        title: "Engineering",
+        content:
+          "Engineers use number series to identify patterns in data and design efficient systems.",
+      },
+      {
+        id: 3,
+        title: "Scientific Research",
+        content:
+          "Scientists use number series to analyze experimental data and identify trends or anomalies.",
+      },
+    ],
+    concepts: {
+      des: "Number series involve recognizing and extending patterns in numerical sequences based on specific rules...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Arithmetic Series",
+          content:
+            "An arithmetic series involves a sequence of numbers with a constant difference between consecutive terms.",
+        },
+        {
+          id: 2,
+          title: "Geometric Series",
+          content:
+            "A geometric series involves a sequence of numbers where each term is a fixed multiple of the previous term.",
+        },
+        {
+          id: 3,
+          title: "Fibonacci Series",
+          content:
+            "A Fibonacci series involves a sequence where each term is the sum of the two preceding ones.",
+        },
+      ],
+    },
+    formulae: "Number Series formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question: "Find the next number in the series: 2, 4, 6, 8, ?",
+        options: ["10", "12", "14", "16"],
+        correctAnswer: "10",
+      },
+      {
+        id: 2,
+        question: "Find the missing number: 3, 6, 9, 12, ?",
+        options: ["15", "14", "18", "21"],
+        correctAnswer: "15",
+      },
+      {
+        id: 3,
+        question: "Complete the series: 5, 10, 15, 20, ?",
+        options: ["25", "30", "35", "40"],
+        correctAnswer: "25",
+      },
+      {
+        id: 4,
+        question: "Find the next term: 7, 14, 21, 28, ?",
+        options: ["35", "42", "49", "56"],
+        correctAnswer: "35",
+      },
+      {
+        id: 5,
+        question: "Complete the series: 1, 4, 9, 16, ?",
+        options: ["25", "20", "30", "36"],
+        correctAnswer: "25",
+      },
+      {
+        id: 6,
+        question: "Find the missing number: 8, 16, 24, 32, ?",
+        options: ["40", "48", "56", "64"],
+        correctAnswer: "40",
+      },
+      {
+        id: 7,
+        question: "Complete the series: 2, 3, 5, 8, ?",
+        options: ["13", "10", "15", "20"],
+        correctAnswer: "13",
+      },
+      {
+        id: 8,
+        question: "Find the next term: 1, 1, 2, 3, 5, 8, ?",
+        options: ["13", "10", "12", "15"],
+        correctAnswer: "13",
+      },
+      {
+        id: 9,
+        question: "Complete the series: 10, 20, 40, 80, ?",
+        options: ["160", "120", "100", "200"],
+        correctAnswer: "160",
+      },
+      {
+        id: 10,
+        question: "Find the next number: 3, 9, 27, 81, ?",
+        options: ["243", "120", "90", "70"],
+        correctAnswer: "243",
+      },
+    ],
+  },
+  "making-judgements": {
+    description:
+      "Making judgements involves evaluating information and arguments to form a reasoned opinion or conclusion...",
+    realLife: [
+      {
+        id: 1,
+        title: "Legal Decision-Making",
+        content:
+          "Judges and lawyers use judgement skills to evaluate evidence and arguments in legal cases.",
+      },
+      {
+        id: 2,
+        title: "Business Strategy",
+        content:
+          "Business leaders make judgements to formulate strategies and make decisions that affect the company's future.",
+      },
+      {
+        id: 3,
+        title: "Medical Diagnosis",
+        content:
+          "Doctors use judgement skills to diagnose medical conditions based on symptoms and test results.",
+      },
+    ],
+    concepts: {
+      des: "Making judgements requires critical thinking and the ability to evaluate information and arguments logically...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Evaluating Evidence",
+          content:
+            "Assessing the reliability and relevance of evidence is crucial in making informed judgements.",
+        },
+        {
+          id: 2,
+          title: "Weighing Arguments",
+          content:
+            "Considering the strength and validity of different arguments helps in forming balanced conclusions.",
+        },
+        {
+          id: 3,
+          title: "Forming Conclusions",
+          content:
+            "Drawing logical conclusions based on the evaluated information is the final step in making judgements.",
+        },
+      ],
+    },
+    formulae: "Making Judgements formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Statement: The company reported a 20% increase in profits this year.\nJudgement: The company will continue to grow at the same rate next year.",
+        options: ["Strong", "Weak"],
+        correctAnswer: "Weak",
+      },
+      {
+        id: 2,
+        question:
+          "Statement: The new policy has reduced the number of traffic accidents.\nJudgement: The policy is effective in improving road safety.",
+        options: ["Strong", "Weak"],
+        correctAnswer: "Strong",
+      },
+      {
+        id: 3,
+        question:
+          "Statement: The book received positive reviews from critics.\nJudgement: The book is a bestseller.",
+        options: ["Strong", "Weak"],
+        correctAnswer: "Weak",
+      },
+      {
+        id: 4,
+        question:
+          "Statement: The restaurant has a five-star rating on a review website.\nJudgement: The restaurant offers excellent food and service.",
+        options: ["Strong", "Weak"],
+        correctAnswer: "Strong",
+      },
+      {
+        id: 5,
+        question:
+          "Statement: The candidate has a degree from a prestigious university.\nJudgement: The candidate is well-qualified for the job.",
+        options: ["Strong", "Weak"],
+        correctAnswer: "Strong",
+      },
+    ],
+  },
+  "analyzing-arguments": {
+    description:
+      "Analyzing arguments involves examining the structure, validity, and soundness of arguments to determine their strength...",
+    realLife: [
+      {
+        id: 1,
+        title: "Debate and Discussion",
+        content:
+          "Analyzing arguments is essential in debates and discussions to evaluate opposing viewpoints.",
+      },
+      {
+        id: 2,
+        title: "Critical Reading",
+        content:
+          "Critical reading requires analyzing arguments presented in texts to understand and evaluate their claims.",
+      },
+      {
+        id: 3,
+        title: "Scientific Research",
+        content:
+          "In scientific research, analyzing arguments helps in evaluating the validity of hypotheses and experimental results.",
+      },
+    ],
+    concepts: {
+      des: "Analyzing arguments requires understanding the logical structure and assessing the validity of the premises and conclusion...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Identifying Premises",
+          content:
+            "Recognizing the premises or assumptions that support the argument is the first step in analysis.",
+        },
+        {
+          id: 2,
+          title: "Evaluating Validity",
+          content:
+            "Assessing whether the premises logically lead to the conclusion determines the argument's validity.",
+        },
+        {
+          id: 3,
+          title: "Identifying Fallacies",
+          content:
+            "Spotting logical fallacies helps in identifying weaknesses or errors in the argument.",
+        },
+      ],
+    },
+    formulae: "Analyzing Arguments formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Argument: All students who study hard get good grades. John studies hard. Therefore, John will get good grades.\nIs the argument valid?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 2,
+        question:
+          "Argument: Some fruits are apples. All apples are sweet. Therefore, some fruits are sweet.\nIs the argument valid?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 3,
+        question:
+          "Argument: If it rains, the ground will be wet. It did not rain. Therefore, the ground is not wet.\nIs the argument valid?",
+        options: ["Yes", "No"],
+        correctAnswer: "No",
+      },
+      {
+        id: 4,
+        question:
+          "Argument: All cats are animals. Some animals are pets. Therefore, all cats are pets.\nIs the argument valid?",
+        options: ["Yes", "No"],
+        correctAnswer: "No",
+      },
+      {
+        id: 5,
+        question:
+          "Argument: All birds can fly. Penguins are birds. Therefore, penguins can fly.\nIs the argument valid?",
+        options: ["Yes", "No"],
+        correctAnswer: "No",
+      },
+    ],
+  },
+  "statement-and-assumption": {
+    description:
+      "Statement and assumption questions involve identifying the underlying assumptions in given statements...",
+    realLife: [
+      {
+        id: 1,
+        title: "Marketing and Advertising",
+        content:
+          "Marketers use assumptions about consumer behavior to create effective advertising strategies.",
+      },
+      {
+        id: 2,
+        title: "Political Analysis",
+        content:
+          "Political analysts make assumptions about voter behavior to predict election outcomes.",
+      },
+      {
+        id: 3,
+        title: "Business Planning",
+        content:
+          "Business planners make assumptions about market trends and economic conditions to develop strategies.",
+      },
+    ],
+    concepts: {
+      des: "Identifying assumptions involves recognizing implicit premises that support the given statement...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Implicit Assumptions",
+          content:
+            "Implicit assumptions are unstated premises that must be true for the statement to hold.",
+        },
+        {
+          id: 2,
+          title: "Evaluating Assumptions",
+          content:
+            "Assessing whether the assumptions are reasonable and valid is crucial in evaluating the statement.",
+        },
+        {
+          id: 3,
+          title: "Assumption Types",
+          content:
+            "Assumptions can be classified into different types based on their nature and relevance to the statement.",
+        },
+      ],
+    },
+    formulae: "Statement and Assumption formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Statement: The company should invest in new technology to improve efficiency.\nAssumption: New technology will improve efficiency.",
+        options: ["Assumption is implicit", "Assumption is not implicit"],
+        correctAnswer: "Assumption is implicit",
+      },
+      {
+        id: 2,
+        question:
+          "Statement: The government should reduce taxes to increase consumer spending.\nAssumption: Reducing taxes will increase consumer spending.",
+        options: ["Assumption is implicit", "Assumption is not implicit"],
+        correctAnswer: "Assumption is implicit",
+      },
+      {
+        id: 3,
+        question:
+          "Statement: The school needs to hire more teachers to improve education quality.\nAssumption: Hiring more teachers will improve education quality.",
+        options: ["Assumption is implicit", "Assumption is not implicit"],
+        correctAnswer: "Assumption is implicit",
+      },
+      {
+        id: 4,
+        question:
+          "Statement: The city should build more parks to promote healthy living.\nAssumption: Building more parks will promote healthy living.",
+        options: ["Assumption is implicit", "Assumption is not implicit"],
+        correctAnswer: "Assumption is implicit",
+      },
+      {
+        id: 5,
+        question:
+          "Statement: The restaurant should lower prices to attract more customers.\nAssumption: Lowering prices will attract more customers.",
+        options: ["Assumption is implicit", "Assumption is not implicit"],
+        correctAnswer: "Assumption is implicit",
+      },
+    ],
+  },
+  "course-of-action": {
+    description:
+      "Course of action involves determining appropriate steps or measures to address a given problem or situation...",
+    realLife: [
+      {
+        id: 1,
+        title: "Crisis Management",
+        content:
+          "In crisis situations, determining the best course of action is crucial to mitigate impact.",
+      },
+      {
+        id: 2,
+        title: "Project Planning",
+        content:
+          "Project managers decide the course of action to ensure successful project completion.",
+      },
+      {
+        id: 3,
+        title: "Medical Treatment",
+        content:
+          "Doctors determine the best course of action to treat patients based on their conditions.",
+      },
+    ],
+    concepts: {
+      des: "Course of action involves analyzing the situation, considering possible measures, and selecting the most appropriate steps...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Problem Analysis",
+          content:
+            "Analyzing the problem to understand its nature and impact is the first step in determining the course of action.",
+        },
+        {
+          id: 2,
+          title: "Evaluating Measures",
+          content:
+            "Assessing the potential measures to determine their feasibility and effectiveness.",
+        },
+        {
+          id: 3,
+          title: "Decision Making",
+          content:
+            "Selecting the best course of action based on the analysis and evaluation.",
+        },
+      ],
+    },
+    formulae: "Course of Action formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Problem: The company's sales have been declining for the past three quarters.\nCourse of Action: The company should conduct market research to identify the reasons for the decline.",
+        options: ["Correct", "Incorrect"],
+        correctAnswer: "Correct",
+      },
+      {
+        id: 2,
+        question:
+          "Problem: The city has been experiencing heavy traffic congestion.\nCourse of Action: The city should invest in public transportation to reduce traffic.",
+        options: ["Correct", "Incorrect"],
+        correctAnswer: "Correct",
+      },
+      {
+        id: 3,
+        question:
+          "Problem: The school is facing a shortage of teachers.\nCourse of Action: The school should increase salaries to attract more teachers.",
+        options: ["Correct", "Incorrect"],
+        correctAnswer: "Correct",
+      },
+      {
+        id: 4,
+        question:
+          "Problem: The restaurant has been receiving complaints about food quality.\nCourse of Action: The restaurant should improve food quality to satisfy customers.",
+        options: ["Correct", "Incorrect"],
+        correctAnswer: "Correct",
+      },
+      {
+        id: 5,
+        question:
+          "Problem: The company's website has been experiencing frequent downtime.\nCourse of Action: The company should upgrade its server infrastructure to improve website reliability.",
+        options: ["Correct", "Incorrect"],
+        correctAnswer: "Correct",
+      },
+    ],
+  },
+  "statement-and-conclusion": {
+    description:
+      "Statement and conclusion questions involve determining whether a given conclusion logically follows from the provided statement...",
+    realLife: [
+      {
+        id: 1,
+        title: "Scientific Research",
+        content:
+          "Scientists use statement and conclusion analysis to determine if experimental results support their hypotheses.",
+      },
+      {
+        id: 2,
+        title: "Legal Reasoning",
+        content:
+          "Lawyers use statement and conclusion analysis to build and evaluate legal arguments.",
+      },
+      {
+        id: 3,
+        title: "Business Analysis",
+        content:
+          "Business analysts use statement and conclusion analysis to make informed decisions based on data.",
+      },
+    ],
+    concepts: {
+      des: "Determining whether a conclusion logically follows from a statement requires understanding the logical relationship between them...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Direct Conclusions",
+          content:
+            "Direct conclusions logically follow from the given statement without additional assumptions.",
+        },
+        {
+          id: 2,
+          title: "Indirect Conclusions",
+          content:
+            "Indirect conclusions require additional assumptions or information to logically follow from the statement.",
+        },
+        {
+          id: 3,
+          title: "Evaluating Validity",
+          content:
+            "Assessing the validity of the conclusion based on the provided statement.",
+        },
+      ],
+    },
+    formulae: "Statement and Conclusion formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Statement: All dogs are animals.\nConclusion: All animals are dogs.",
+        options: ["Conclusion follows", "Conclusion does not follow"],
+        correctAnswer: "Conclusion does not follow",
+      },
+      {
+        id: 2,
+        question:
+          "Statement: Some fruits are apples.\nConclusion: Some apples are fruits.",
+        options: ["Conclusion follows", "Conclusion does not follow"],
+        correctAnswer: "Conclusion follows",
+      },
+      {
+        id: 3,
+        question:
+          "Statement: All cars are vehicles.\nConclusion: Some vehicles are cars.",
+        options: ["Conclusion follows", "Conclusion does not follow"],
+        correctAnswer: "Conclusion follows",
+      },
+      {
+        id: 4,
+        question: "Statement: No cats are dogs.\nConclusion: No dogs are cats.",
+        options: ["Conclusion follows", "Conclusion does not follow"],
+        correctAnswer: "Conclusion follows",
+      },
+      {
+        id: 5,
+        question:
+          "Statement: Some books are novels.\nConclusion: All novels are books.",
+        options: ["Conclusion follows", "Conclusion does not follow"],
+        correctAnswer: "Conclusion follows",
+      },
+    ],
+  },
+  "cause-and-effect": {
+    description:
+      "Cause and effect questions involve identifying the relationship between events where one event is the result of the other...",
+    realLife: [
+      {
+        id: 1,
+        title: "Scientific Research",
+        content:
+          "Scientists study cause and effect to understand the relationship between variables in experiments.",
+      },
+      {
+        id: 2,
+        title: "Policy Making",
+        content:
+          "Policy makers analyze cause and effect to predict the outcomes of implementing new policies.",
+      },
+      {
+        id: 3,
+        title: "Healthcare",
+        content:
+          "Doctors study cause and effect to determine the causes of diseases and the effects of treatments.",
+      },
+    ],
+    concepts: {
+      des: "Identifying cause and effect relationships involves understanding how one event leads to another...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Direct Cause and Effect",
+          content:
+            "Direct cause and effect relationships are straightforward, where one event directly causes another.",
+        },
+        {
+          id: 2,
+          title: "Indirect Cause and Effect",
+          content:
+            "Indirect cause and effect relationships involve a series of intermediate steps or events.",
+        },
+        {
+          id: 3,
+          title: "Correlation vs. Causation",
+          content:
+            "Understanding the difference between correlation and causation is crucial to avoid false conclusions.",
+        },
+      ],
+    },
+    formulae: "Cause and Effect formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Event: It rained heavily last night.\nEffect: The streets are flooded.\nIs this a cause and effect relationship?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 2,
+        question:
+          "Event: The power went out.\nEffect: The refrigerator stopped working.\nIs this a cause and effect relationship?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 3,
+        question:
+          "Event: He studied hard for the exam.\nEffect: He scored high marks.\nIs this a cause and effect relationship?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 4,
+        question:
+          "Event: She forgot her umbrella.\nEffect: She got wet in the rain.\nIs this a cause and effect relationship?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 5,
+        question:
+          "Event: The company increased its marketing budget.\nEffect: Sales decreased.\nIs this a cause and effect relationship?",
+        options: ["Yes", "No"],
+        correctAnswer: "No",
+      },
+    ],
+  },
+  "theme-detection": {
+    description:
+      "Theme detection involves identifying the central idea or underlying message in a given text or situation...",
+    realLife: [
+      {
+        id: 1,
+        title: "Literary Analysis",
+        content:
+          "Literary critics analyze themes in novels, poems, and other works of literature.",
+      },
+      {
+        id: 2,
+        title: "Film and Media Studies",
+        content:
+          "Film critics and media analysts identify themes in movies, TV shows, and other media.",
+      },
+      {
+        id: 3,
+        title: "Communication",
+        content:
+          "Effective communication often requires understanding the underlying themes in conversations and speeches.",
+      },
+    ],
+    concepts: {
+      des: "Detecting themes requires recognizing recurring ideas and messages that give deeper meaning to the content...",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Identifying Main Ideas",
+          content:
+            "Recognizing the main ideas that are repeated or emphasized in the content.",
+        },
+        {
+          id: 2,
+          title: "Understanding Context",
+          content:
+            "Understanding the context in which the content is presented helps in identifying themes.",
+        },
+        {
+          id: 3,
+          title: "Interpreting Messages",
+          content:
+            "Interpreting the messages conveyed through various elements like words, images, and actions.",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+        id: 1,
+        question:
+          "Text: The story revolves around a young girl who overcomes various obstacles to achieve her dreams.\nTheme: Perseverance.\nIs this the correct theme?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 2,
+        question:
+          "Text: The movie depicts the impact of war on soldiers and their families.\nTheme: Courage.\nIs this the correct theme?",
+        options: ["Yes", "No"],
+        correctAnswer: "No",
+      },
+      {
+        id: 3,
+        question:
+          "Text: The poem explores the beauty of nature and the fleeting nature of time.\nTheme: Transience.\nIs this the correct theme?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 4,
+        question:
+          "Text: The article discusses the importance of honesty in personal and professional relationships.\nTheme: Integrity.\nIs this the correct theme?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+      {
+        id: 5,
+        question:
+          "Text: The novel portrays the struggles of an immigrant family adapting to a new country.\nTheme: Resilience.\nIs this the correct theme?",
+        options: ["Yes", "No"],
+        correctAnswer: "Yes",
+      },
+    ],
+  },
 };
 
 export default topicsData;

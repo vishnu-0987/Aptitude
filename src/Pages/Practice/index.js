@@ -19,10 +19,17 @@ const Practice = (props) => {
   };
 
   const changeOption = (id, opt) => {
-    setSelectedOpt((prev) => ({
-      ...prev,
-      [id]: opt,
-    }));
+    if (selectedOpt[id] === opt) {
+      setSelectedOpt((prev) => ({
+        ...prev,
+        [id]: false,
+      }));
+    } else {
+      setSelectedOpt((prev) => ({
+        ...prev,
+        [id]: opt,
+      }));
+    }
     // Reset the submission status when a new option is selected
     setSubmittedOpt((prev) => ({
       ...prev,
@@ -116,11 +123,7 @@ const Practice = (props) => {
               *Please select an option
             </p>
           )}
-          {view[item.id] && (
-            <p style={{ color: "green", fontSize: "15px" }}>
-              Answer: {item.correctAnswer}
-            </p>
-          )}
+
           {isWorkSpace[item.id] && (
             <textarea rows={15} className="textarea"></textarea>
           )}
