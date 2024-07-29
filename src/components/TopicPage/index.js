@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import Concepts from "../../Pages/Concepts";
-import Formulaes from "../../Pages/Formulaes";
-import Practice from "../../Pages/Practice";
-import RealLife from "../../Pages/RealLife";
+import Concepts from "../Concepts";
+import Formulaes from "../Formulaes";
+import Practice from "../Practice";
+import RealLife from "../RealLife";
 import Header from "../Header";
 import "./index.css";
 
@@ -49,13 +49,13 @@ const TopicPage = () => {
   const renderBottom = () => {
     switch (selected) {
       case "real-life":
-        return <RealLife topic={topic} />;
+        return <RealLife topic={topic} main={"logical"} />;
       case "concepts":
-        return <Concepts topic={topic} />;
+        return <Concepts topic={topic} main={"logical"} />;
       case "formulaes":
-        return <Formulaes topic={topic} />;
+        return <Formulaes topic={topic} main={"logical"} />;
       case "practice":
-        return <Practice topic={topic} />;
+        return <Practice topic={topic} main={"logical"} />;
 
       default:
         return null;
@@ -75,7 +75,7 @@ const TopicPage = () => {
               onClick={() => setSelected("concepts")}
               className={`${selected === "concepts" ? "selectedCat" : ""}`}
             >
-              Concepts
+              Synopsis
             </button>
             {(topic === "clock" || topic === "calender") && (
               <button
@@ -94,6 +94,7 @@ const TopicPage = () => {
             >
               Practice Questions
             </button>
+            <button type="button">Quiz</button>
           </div>
           <div className="bottom-content-container">{renderBottom()}</div>
         </div>

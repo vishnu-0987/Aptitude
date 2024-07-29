@@ -1,5 +1,5 @@
-import Header from "../Header";
-import Topic from "../Topic";
+import Header from "../../components/Header";
+import Topic from "../../components/Topic";
 import "./index.css";
 
 const topics = [

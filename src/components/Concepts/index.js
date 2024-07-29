@@ -1,4 +1,5 @@
 import topicsData from "../../topicsData";
+import quantitativeTopic from "../../quantitativeTopic";
 import "./index.css";
 
 const Concepts = (props) => {
@@ -8,7 +9,13 @@ const Concepts = (props) => {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   };
-  const jsonData = topicsData[props.topic];
+  const { topic, main } = props;
+  let jsonData;
+  if (main === "logical") {
+    jsonData = topicsData[topic];
+  } else {
+    jsonData = quantitativeTopic[topic];
+  }
   const { concepts } = jsonData;
   const { des, subConcepts } = concepts;
   const cap = capitalizeTopic(props.topic);
