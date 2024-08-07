@@ -61,15 +61,14 @@ const AptitudePage = () => {
             >
               Synopsis
             </button>
-            {(chapter === "clock" || chapter === "calender") && (
-              <button
-                type="button"
-                onClick={() => setSelected("formulaes")}
-                className={`${selected === "formulaes" ? "selectedCat" : ""}`}
-              >
-                Formulaes
-              </button>
-            )}
+
+            <button
+              type="button"
+              onClick={() => setSelected("formulaes")}
+              className={`${selected === "formulaes" ? "selectedCat" : ""}`}
+            >
+              Formulaes
+            </button>
 
             <button
               type="button"
