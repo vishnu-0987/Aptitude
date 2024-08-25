@@ -17,22 +17,14 @@ const Concepts = (props) => {
     jsonData = quantitativeTopic[topic];
   }
   const { concepts } = jsonData;
-  const { des, subConcepts } = concepts;
+
   const cap = capitalizeTopic(props.topic);
 
   return (
-    <div className="concept-main-container">
-      <h1>Understanding the Concepts of {cap}</h1>
-      <p>{des}</p>
-      {subConcepts.map((item) => (
-        <div className="sub-concepts">
-          <h3>
-            {item.id}. {item.title}
-          </h3>
-          <p>{item.content}</p>
-        </div>
-      ))}
-    </div>
+    <div
+      className="sub-concepts"
+      dangerouslySetInnerHTML={{ __html: concepts }}
+    ></div>
   );
 };
 

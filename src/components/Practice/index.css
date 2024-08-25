@@ -43,6 +43,7 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .each-question p {

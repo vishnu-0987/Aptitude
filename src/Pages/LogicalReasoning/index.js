@@ -27,7 +27,7 @@ const LogicalReasoning = () => (
     <Header />
     <div className="logical-container">
       <div className="img-container">
-        <img src="./logicalbanner.jpg" alt="logical-banner" />
+        <img src="/Assets/logicalbanner.jpg" alt="logical-banner" />
       </div>
       <div className="all-topics-container">
         <h1>Important Topics</h1>
