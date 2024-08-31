@@ -50,33 +50,63 @@ const topicsData = {
     formulae: [
       {
         id: 1,
-        toCalculate: "Total Degrees in a Clock",
+        toCalculate: "Decimal to Binary Conversion",
         formuales:
-          "In a 12-hour analog clock, there are 360 degrees. In a 24-hour analog clock, there are 720 degrees.",
+          "To convert a decimal number to binary, divide the decimal number by 2 repeatedly and note the remainders in reverse order.",
       },
       {
         id: 2,
-        toCalculate: "Degrees covered by Hour Hand",
+        toCalculate: "Binary to Decimal Conversion",
         formuales:
-          "The hour hand covers 30 degrees per hour (360 degrees divided by 12 hours in a 12-hour clock). In a 24-hour clock, it covers 15 degrees per hour.",
+          "To convert a binary number to decimal, multiply each digit by its positional value and sum the results.",
       },
       {
         id: 3,
-        toCalculate: "Degrees covered by Minute Hand",
+        toCalculate: "Decimal to Hexadecimal Conversion",
         formuales:
-          "The minute hand covers 6 degrees per minute (360 degrees divided by 60 minutes).",
+          "To convert a decimal number to hexadecimal, divide the decimal number by 16 repeatedly and note the remainders in reverse order.",
       },
       {
         id: 4,
-        toCalculate: "Degrees covered by Second Hand",
+        toCalculate: "Hexadecimal to Decimal Conversion",
         formuales:
-          "The second hand covers 6 degrees per second (360 degrees divided by 60 seconds).",
+          "To convert a hexadecimal number to decimal, multiply each digit by its positional value and sum the results.",
       },
       {
         id: 5,
-        toCalculate: "Angle between Hour and Minute Hands",
+        toCalculate: "Binary Addition",
         formuales:
-          "The angle formed between the hour and minute hands is given by the formula: Angle = [(11 / 2) M - 30 H] ( where M is the minute value and H is the hour value )",
+          "Perform addition of binary numbers following the rules of binary addition: 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 1 + 1 = 10 (carry 1, write 0).",
+      },
+      {
+        id: 6,
+        toCalculate: "Binary Subtraction",
+        formuales:
+          "Perform subtraction of binary numbers following the rules of binary subtraction: 0 - 0 = 0, 1 - 0 = 1, 1 - 1 = 0, borrow from higher place value if necessary.",
+      },
+      {
+        id: 7,
+        toCalculate: "Binary Multiplication",
+        formuales:
+          "Perform multiplication of binary numbers following the rules of binary multiplication: 0 × 0 = 0, 0 × 1 = 0, 1 × 0 = 0, 1 × 1 = 1.",
+      },
+      {
+        id: 8,
+        toCalculate: "Decimal to Binary Conversion",
+        formuales:
+          "To convert a decimal number to binary, divide the decimal number by 2 repeatedly and note the remainders in reverse order.",
+      },
+      {
+        id: 9,
+        toCalculate: "Binary to Decimal Conversion",
+        formuales:
+          "To convert a binary number to decimal, multiply each digit by its positional value and sum the results.",
+      },
+      {
+        id: 10,
+        toCalculate: "Decimal to Hexadecimal Conversion",
+        formuales:
+          "To convert a decimal number to hexadecimal, divide the decimal number by 16 repeatedly and note the remainders in reverse order.",
       },
     ],
     practiceQuestions: [
@@ -655,88 +685,240 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
-      },
-      {
+        template: "Four defensive football players are chasing the opposing wide receiver, who has the ball. Calvin is directly behind the ball carrier. Jenkins and Burton are side by side behind Calvin. Zeller is behind Jenkins and Burton. Calvin tries for the tackle but misses and falls. Burton trips. Which defensive player tackles the receiver?",
+        variables: {},
+        correctAnswerFormula: "Jenkins",
+        optionsFormula: [
+          "Calvin",
+          "Jenkins",
+          "Burton",
+          "Zeller"
+        ],
+        explanationTemplate: `Given the scenario:
+        
+        - Calvin is directly behind the ball carrier but misses the tackle and falls.
+        - Burton, who is side by side with Jenkins, trips.
+        - Zeller is behind Jenkins and Burton.
+        
+        Since Calvin misses the tackle and Burton trips, Jenkins, who is still in position, would be the one to tackle the receiver.
+        
+        Therefore, the correct answer is Jenkins.`
+      }, {
         id: 2,
-        question:
-          "Which one of the following is a meaningful word if the consonants are deleted: ENIGMA, IGLOO, EXAMPLE, ORANGE?",
-        options: ["ENIGMA", "IGLOO", "EXAMPLE", "ORANGE"],
-        correctAnswer: "IGLOO",
+        template: "A four-person crew from Classic Colors is painting Mr. Field's house. Michael is painting the front of the house. Ross is in the alley behind the house painting the back. Jed is painting the window frames on the north side, and Shawn is on the south. If Michael switches places with Jed, and Jed then switches places with Shawn, where is Shawn?",
+        variables: {},
+        correctAnswerFormula: "In front of the house",
+        optionsFormula: [
+          "In the alley behind the house",
+          "On the north side of the house",
+          "In front of the house",
+          "On the south side of the house"
+        ],
+        explanationTemplate: `Given the scenario:
+      
+        - Initially, Michael is in front of the house, Ross is at the back, Jed is on the north side, and Shawn is on the south side.
+        - Michael switches places with Jed, so Michael is now on the north side and Jed is in front of the house.
+        - Jed then switches places with Shawn, so Jed is now on the south side and Shawn is in front of the house.
+      
+        Therefore, the correct answer is that Shawn is in front of the house.`
       },
       {
         id: 3,
-        question:
-          "If all wibbles are wobbles and all wobbles are wubbles, are all wibbles definitely wubbles?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "In a four-day period Monday through Thursday, each of the following temporary office workers worked only one day, each on a different day. Ms. Johnson was scheduled to work on Monday, but she traded with Mr. Carter, who was originally scheduled to work on Wednesday. Ms. Falk traded with Mr. Kirk, who was originally scheduled to work on Thursday. After all the switching was done, who worked on Tuesday?",
+        variables: {},
+        correctAnswerFormula: "Ms. Falk",
+        optionsFormula: [
+          "Ms. Johnson",
+          "Mr. Carter",
+          "Ms. Falk",
+          "Mr. Kirk"
+        ],
+        explanationTemplate: `Given the scenario:
+      
+        - Ms. Johnson was originally scheduled for Monday but switched with Mr. Carter, who was supposed to work on Wednesday. So, Mr. Carter now works on Monday, and Ms. Johnson on Wednesday.
+        - Ms. Falk was originally scheduled for Tuesday but traded with Mr. Kirk, who was supposed to work on Thursday. This means Ms. Falk now works on Thursday, and Mr. Kirk on Tuesday.
+      
+        Therefore, after all the switching, Ms. Falk worked on Tuesday.`
       },
       {
         id: 4,
-        question:
-          "If some zips are zaps and some zaps are zups, are some zips definitely zups?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Four people witnessed a mugging. Each gave a different description of the mugger. Which description is probably right?",
+        variables: {},
+        correctAnswerFormula: "The one that is most consistent with common details",
+        optionsFormula: [
+          "He was average height, thin, and middle-aged.",
+          "He was tall, thin, and middle-aged.",
+          "He was tall, thin, and young.",
+          "He was tall, of average weight, and middle-aged."
+        ],
+        explanationTemplate: `In scenarios like this, the description that aligns with the most common details provided by the witnesses is likely the most accurate. 
+      
+        For example:
+        - If three witnesses describe the mugger as tall and thin, those details are more likely accurate.
+        - The age or weight could vary based on the witnesses' perspectives or the conditions under which they observed the mugger.
+      
+        Therefore, the description that includes the most consistent and corroborated details is probably correct.`
       },
       {
         id: 5,
-        question:
-          "Which one of the following is a meaningful word if the vowels are deleted: BUTTON, BUCKET, BOOT, BOOK?",
-        options: ["BUTTON", "BUCKET", "BOOT", "BOOK"],
-        correctAnswer: "BOOT",
+        template: "Fact 1: Jessica has four children. Fact 2: Two of the children have blue eyes and two of the children have brown eyes. Fact 3: Half of the children are girls. If the first three statements are facts, which of the following statements must also be a fact? I: At least one girl has blue eyes. II: Two of the children are boys. III: The boys have brown eyes.",
+        variables: {},
+        correctAnswerFormula: "II: Two of the children are boys",
+        optionsFormula: [
+          "I: At least one girl has blue eyes",
+          "II: Two of the children are boys",
+          "III: The boys have brown eyes"
+        ],
+        explanationTemplate: `Given the facts:
+      
+        - Jessica has four children.
+        - Two have blue eyes, and two have brown eyes.
+        - Half of the children are girls, meaning two are girls and two are boys.
+      
+        From these facts, we can deduce:
+        
+        - Statement I: "At least one girl has blue eyes" is not necessarily a fact because we do not have information on the specific distribution of eye color among the girls and boys.
+        - Statement II: "Two of the children are boys" must be a fact because half of four children (as per Fact 3) is two.
+        - Statement III: "The boys have brown eyes" is not necessarily a fact because, based on the given information, the boys could have either blue or brown eyes.
+      
+        Therefore, the correct answer is statement II: Two of the children are boys.`
       },
       {
         id: 6,
-        question:
-          "If all grints are globs and no globs are glims, are some grints definitely not glims?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Fact 1: All drink mixes are beverages.\nFact 2: All beverages are drinkable.\nFact 3: Some beverages are red.\nIf the first three statements are facts, which of the following statements must also be a fact?\nI: Some drink mixes are red.\nII: All beverages are drink mixes.\nIII: All red drink mixes are drinkable.",
+        variables: {},
+        correctAnswerFormula: "III: All red drink mixes are drinkable",
+        optionsFormula: [
+          "I: Some drink mixes are red",
+          "II: All beverages are drink mixes",
+          "III: All red drink mixes are drinkable"
+        ],
+        explanationTemplate: `Given the facts:
+      
+        - Fact 1: All drink mixes are beverages.
+        - Fact 2: All beverages are drinkable.
+        - Fact 3: Some beverages are red.
+      
+        From these facts, we can deduce:
+        
+        - Statement I: "Some drink mixes are red" is not necessarily a fact because while some beverages are red, there's no direct statement that links red color specifically to drink mixes.
+        - Statement II: "All beverages are drink mixes" is false because not all beverages are necessarily drink mixes.
+        - Statement III: "All red drink mixes are drinkable" must be a fact because all drink mixes (whether red or not) are beverages, and all beverages are drinkable (as per Fact 2).
+      
+        Therefore, the correct answer is statement III: All red drink mixes are drinkable.`
       },
       {
         id: 7,
-        question:
-          "Which one of the following is a meaningful word if the consonants are deleted: APPLE, APRIL, ALMOND, AVOCADO?",
-        options: ["APPLE", "APRIL", "ALMOND", "AVOCADO"],
-        correctAnswer: "AVOCADO",
+        template: "Fact 1: All chickens are birds.\nFact 2: Some chickens are hens.\nFact 3: Female birds lay eggs.\nIf the first three statements are facts, which of the following statements must also be a fact?\nI: All birds lay eggs.\nII: Some hens are birds.\nIII: Some chickens are not hens.",
+        variables: {},
+        correctAnswerFormula: "II: Some hens are birds",
+        optionsFormula: [
+          "I: All birds lay eggs",
+          "II: Some hens are birds",
+          "III: Some chickens are not hens"
+        ],
+        explanationTemplate: `Given the facts:
+      
+        - Fact 1: All chickens are birds.
+        - Fact 2: Some chickens are hens.
+        - Fact 3: Female birds lay eggs.
+      
+        From these facts, we can deduce:
+        
+        - Statement I: "All birds lay eggs" is not necessarily a fact because Fact 3 only states that female birds lay eggs, not all birds.
+        - Statement II: "Some hens are birds" must be a fact because hens are a type of chicken, and all chickens are birds (Fact 1).
+        - Statement III: "Some chickens are not hens" is a possible scenario but is not necessarily a fact based on the given information.
+      
+        Therefore, the correct answer is statement II: Some hens are birds.`
       },
       {
         id: 8,
-        question:
-          "If all frups are fraps and some fraps are frips, are some frups definitely frips?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Fact 1: All hats have brims.\nFact 2: There are black hats and blue hats.\nFact 3: Baseball caps are hats.\nIf the first three statements are facts, which of the following statements must also be a fact?\nI: All caps have brims.\nII: Some baseball caps are blue.\nIII: Baseball caps have no brims.",
+        variables: {},
+        correctAnswerFormula: "I: All caps have brims",
+        optionsFormula: [
+          "I: All caps have brims",
+          "II: Some baseball caps are blue",
+          "III: Baseball caps have no brims"
+        ],
+        explanationTemplate: `Given the facts:
+      
+        - Fact 1: All hats have brims.
+        - Fact 2: There are black hats and blue hats.
+        - Fact 3: Baseball caps are hats.
+      
+        From these facts, we can deduce:
+      
+        - Statement I: "All caps have brims" must be a fact because baseball caps are a type of hat, and all hats have brims (Fact 1).
+        - Statement II: "Some baseball caps are blue" is not necessarily a fact because we do not have information on the specific color distribution of baseball caps.
+        - Statement III: "Baseball caps have no brims" is false because it contradicts Fact 1.
+      
+        Therefore, the correct answer is statement I: All caps have brims.`
       },
       {
         id: 9,
-        question:
-          "Which one of the following is a meaningful word if the vowels are deleted: WINDOW, WINNER, WONDER, WATER?",
-        options: ["WINDOW", "WINNER", "WONDER", "WATER"],
-        correctAnswer: "WONDER",
+        template: "Fact 1: Eyeglass frames cost between $35 and $350.\nFact 2: Some eyeglass frames are made of titanium.\nFact 3: Some eyeglass frames are made of plastic.\nIf the first three statements are facts, which of the following statements must also be a fact?\nI: Titanium eyeglass frames cost more than plastic frames.\nII: Expensive eyeglass frames last longer than cheap frames.\nIII: Only a few eyeglass frames cost less than $35.",
+        variables: {},
+        correctAnswerFormula: "III: Only a few eyeglass frames cost less than $35.",
+        optionsFormula: [
+          "I: Titanium eyeglass frames cost more than plastic frames.",
+          "II: Expensive eyeglass frames last longer than cheap frames.",
+          "III: Only a few eyeglass frames cost less than $35."
+        ],
+        explanationTemplate: `Given the facts:
+      
+        - Fact 1: Eyeglass frames cost between $35 and $350.
+        - Fact 2: Some eyeglass frames are made of titanium.
+        - Fact 3: Some eyeglass frames are made of plastic.
+      
+        From these facts, we can deduce:
+      
+        - Statement I: "Titanium eyeglass frames cost more than plastic frames" is not necessarily a fact because there is no information linking the material to cost.
+        - Statement II: "Expensive eyeglass frames last longer than cheap frames" is a common assumption but is not a fact based on the given information.
+        - Statement III: "Only a few eyeglass frames cost less than $35" is a fact because the cost range starts at $35, meaning frames costing less than $35 are rare or non-existent.
+      
+        Therefore, the correct answer is statement III: Only a few eyeglass frames cost less than $35.`
       },
       {
         id: 10,
-        question:
-          "If all blats are blips and all blips are blups, are all blats definitely blups?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
-      },
-      {
-        id: 11,
-        question:
-          "If some crunks are crinks and some crinks are cronks, are some crunks definitely cronks?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
-      },
-      {
-        id: 12,
-        question:
-          "Which one of the following is a meaningful word if the consonants are deleted: INSIGHT, INCITE, INPUT, ICON?",
-        options: ["INSIGHT", "INCITE", "INPUT", "ICON"],
-        correctAnswer: "ICON",
-      },
+        template: "Fact 1: Most stuffed toys are stuffed with beans.\nFact 2: There are stuffed bears and stuffed tigers.\nFact 3: Some chairs are stuffed with beans.\nIf the first three statements are facts, which of the following statements must also be a fact?\nI: Only children's chairs are stuffed with beans.\nII: All stuffed tigers are stuffed with beans.\nIII: Stuffed monkeys are not stuffed with beans.",
+        variables: {},
+        correctAnswerFormula: "None of the statements is a known fact",
+        optionsFormula: [
+          "I: Only children's chairs are stuffed with beans.",
+          "II: All stuffed tigers are stuffed with beans.",
+          "III: Stuffed monkeys are not stuffed with beans."
+        ],
+        explanationTemplate: `Given the facts:
+      
+        - Fact 1: Most stuffed toys are stuffed with beans.
+        - Fact 2: There are stuffed bears and stuffed tigers.
+        - Fact 3: Some chairs are stuffed with beans.
+      
+        From these facts, we can deduce:
+      
+        - Statement I: "Only children's chairs are stuffed with beans" is not supported by the facts because there is no information specifying the type of chairs.
+        - Statement II: "All stuffed tigers are stuffed with beans" cannot be determined because we only know that most stuffed toys are stuffed with beans, not all.
+        - Statement III: "Stuffed monkeys are not stuffed with beans" is not supported by the facts because no information is provided about stuffed monkeys.
+      
+        Therefore, none of the provided statements can be confirmed as a fact based on the given information.`
+      }
+
+      ,
+      // {
+      //   id: 11,
+      //   question:
+      //     "If some crunks are crinks and some crinks are cronks, are some crunks definitely cronks?",
+      //   options: ["Yes", "No"],
+      //   correctAnswer: "No",
+      // },
+      // {
+      //   id: 12,
+      //   question:
+      //     "Which one of the following is a meaningful word if the consonants are deleted: INSIGHT, INCITE, INPUT, ICON?",
+      //   options: ["INSIGHT", "INCITE", "INPUT", "ICON"],
+      //   correctAnswer: "ICON",
+      // },
     ],
   },
   "order-and-ranking": {
@@ -801,74 +983,245 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "If John ranks 12th from the top in a class of 50 students, what is his rank from the bottom?",
-        options: ["38th", "39th", "40th", "41st"],
-        correctAnswer: "39th",
+        template: "In a row of certain persons, Pradip is sitting 463 from the left end and 531 from the right end. Find out the total number of persons in that row.",
+        variables: {},
+        correctAnswerFormula: "993",
+        optionsFormula: [
+          "963",
+          "942",
+          "993",
+          "Can’t be determined"
+        ],
+        explanationTemplate: `To find the total number of persons in the row, add Pradip's positions from both ends and subtract 1 (since Pradip is counted twice in this addition).
+      
+        Total number of persons = (Position from left end) + (Position from right end) - 1
+                                = 463 + 531 - 1
+                                = 993
+      
+        Therefore, the total number of persons in the row is 993.`
       },
       {
         id: 2,
-        question:
-          "If Jane ranks 8th from the bottom in a group of 25 students, what is her rank from the top?",
-        options: ["16th", "17th", "18th", "19th"],
-        correctAnswer: "18th",
+        template: "In a row all the persons are facing north, Rahul is 33rd from the left end and in the right side of Rahul, there are only 16 persons. Find out total number of persons in this queue.",
+        variables: {},
+        correctAnswerFormula: "50",
+        optionsFormula: [
+          "49",
+          "50",
+          "51",
+          "Can’t be determined"
+        ],
+        explanationTemplate: `To find the total number of persons in the row, add Rahul's position from the left end and the number of persons to the right of Rahul, then add 1 (to include Rahul himself).
+      
+        Total number of persons = (Position from left end) + (Number of persons to the right of Rahul) + 1
+                                = 33 + 16 + 1
+                                = 50
+      
+        Therefore, the total number of persons in the queue is 50.`
       },
       {
         id: 3,
-        question:
-          "In a race of 10 participants, if Amy finishes 2nd and Ben finishes 5th, how many participants finish between them?",
-        options: ["2", "3", "4", "5"],
-        correctAnswer: "2",
+        template: "In a row of 60 persons, Ganesh is 26th from the left end. Find out his position from the right end.",
+        variables: {},
+        correctAnswerFormula: "35",
+        optionsFormula: [
+          "35",
+          "36",
+          "34",
+          "Can’t be determined"
+        ],
+        explanationTemplate: `To find Ganesh's position from the right end, subtract his position from the left end from the total number of persons and then add 1 (to include Ganesh himself).
+      
+        Position from right end = Total number of persons - Position from left end + 1
+                                 = 60 - 26 + 1
+                                 = 35
+      
+        Therefore, Ganesh's position from the right end is 35.`
       },
       {
         id: 4,
-        question:
-          "If Kevin is ranked 15th from the top and 10th from the bottom in a competition, how many participants are there?",
-        options: ["24", "25", "26", "27"],
-        correctAnswer: "24",
+        template: "In a row, Yash is 15th from left end while Rima is 56th from right end and 16th to the right of Monu. Find out total number of persons of this queue.",
+        variables: {},
+        correctAnswerFormula: "94",
+        optionsFormula: [
+          "65",
+          "83",
+          "94",
+          "Can’t be determined"
+        ],
+        explanationTemplate: `To determine the total number of persons in the row, follow these steps:
+      
+        1. Find Monu's position. Since Rima is 16th to the right of Monu, Monu's position from the right end is Rima's position from the right end plus 16.
+           Monu's position from the right end = 56 + 16 = 72
+      
+        2. Find Monu's position from the left end. Subtract Monu's position from the right end from the total number of persons and then add 1.
+           Monu's position from the left end = Total number of persons - 72 + 1
+      
+        3. Given that Yash is 15th from the left end, and Yash and Monu must be included in the count of total persons:
+           Monu's position from the left end must be equal to Yash's position from the left end plus the gap between Yash and Monu.
+           Total number of persons = Yash's position from the left end + Monu's position from the left end - Yash's position from the left end + 1
+           = 15 + (72 - 15) = 94
+      
+        Therefore, the total number of persons in the queue is 94.`
       },
       {
         id: 5,
-        question:
-          "In a class of 30 students, if Sarah is ranked 3rd and Lisa is ranked 28th, how many students are between them?",
-        options: ["24", "25", "26", "27"],
-        correctAnswer: "24",
+        template: "Siya is 18th from left end and 12th to the right of Rinku who is 38th from the right end. If all of them are facing north, find out total number of persons in the row.",
+        variables: {},
+        correctAnswerFormula: "43",
+        optionsFormula: [
+          "44",
+          "43",
+          "45",
+          "Can’t be determined"
+        ],
+        explanationTemplate: `To find the total number of persons in the row, follow these steps:
+      
+        1. Determine Rinku's position from the left end. Since Siya is 12th to the right of Rinku, Siya's position from the left end can be used to find Rinku's position from the left end.
+           Siya's position from the left end = Rinku's position from the left end + 12
+           So, Rinku's position from the left end = Siya's position from the left end - 12
+                                                  = 18 - 12
+                                                  = 6
+      
+        2. Calculate the total number of persons in the row. Subtract Rinku's position from the right end from the total number of persons and add Rinku's position from the left end and 1.
+           Total number of persons = Rinku's position from the left end + Rinku's position from the right end - 1
+                                   = 6 + 38 - 1
+                                   = 43
+      
+        Therefore, the total number of persons in the row is 43.`
       },
       {
         id: 6,
-        question:
-          "If Paul is ranked 6th from the top in a list of 20, what is his rank from the bottom?",
-        options: ["14th", "15th", "16th", "17th"],
-        correctAnswer: "15th",
+        template: "In a group of 105 students, Ravi’s rank is 36th from the top and Sarika’s rank is 41st from the bottom. How many students are there in between Ravi and Sarika (if no two persons got the same rank)?",
+        variables: {},
+        correctAnswerFormula: "28",
+        optionsFormula: [
+          "28",
+          "39",
+          "Can’t be determined",
+          "None of these"
+        ],
+        explanationTemplate: `To find the number of students in between Ravi and Sarika, follow these steps:
+      
+        1. Determine Sarika's rank from the top. Since Sarika's rank is 41st from the bottom and there are 105 students in total:
+           Sarika's rank from the top = Total number of students - Sarika's rank from the bottom + 1
+                                      = 105 - 41 + 1
+                                      = 65
+      
+        2. Calculate the number of students between Ravi and Sarika:
+           Number of students in between = Sarika's rank from the top - Ravi's rank from the top - 1
+                                          = 65 - 36 - 1
+                                          = 28
+      
+        Therefore, there are 28 students between Ravi and Sarika.`
       },
       {
         id: 7,
-        question:
-          "In a row of 50 students, if Peter is 20th from the left, what is his position from the right?",
-        options: ["29th", "30th", "31st", "32nd"],
-        correctAnswer: "31st",
+        template: "In a batch of 100 students, Kavya’s rank is 50th from the top and Lucky’s rank is 68th from the bottom. How many students are there in between Kavya and Lucky (if no two persons got the same rank)?",
+        variables: {},
+        correctAnswerFormula: "13",
+        optionsFormula: [
+          "Less than 10",
+          "16",
+          "Can’t be determined",
+          "13"
+        ],
+        explanationTemplate: `To find the number of students in between Kavya and Lucky, follow these steps:
+      
+        1. Determine Lucky's rank from the top. Since Lucky's rank is 68th from the bottom and there are 100 students in total:
+           Lucky's rank from the top = Total number of students - Lucky's rank from the bottom + 1
+                                     = 100 - 68 + 1
+                                     = 33
+      
+        2. Calculate the number of students between Kavya and Lucky:
+           Number of students in between = Kavya's rank from the top - Lucky's rank from the top - 1
+                                          = 50 - 33 - 1
+                                          = 16
+      
+        Therefore, there are 16 students between Kavya and Lucky.`
       },
       {
         id: 8,
-        question:
-          "If Mary is ranked 10th in a class of 40 students, how many students are ranked below her?",
-        options: ["29", "30", "31", "32"],
-        correctAnswer: "30",
+        template: "In a single row, there are some girls and all of them are facing north. Diksha’s rank is 19th from the left end and Trisha’s rank is 17th from the right end. If 5 students are sitting in between them, find the number of students in the class.",
+        variables: {},
+        correctAnswerFormula: "42",
+        optionsFormula: [
+          "31",
+          "49",
+          "50",
+          "42"
+        ],
+        explanationTemplate: `To find the total number of students in the class, follow these steps:
+      
+        1. Determine Trisha's position from the left end. Since there are 5 students between Diksha and Trisha, the total distance between them is 5 + 2 (Diksha's and Trisha's positions) = 7 positions.
+           Trisha's position from the left end = Diksha's position from the left end + 5 + 1
+                                                = 19 + 5 + 1
+                                                = 25
+      
+        2. Calculate the total number of students in the class. Since Trisha's position from the right end is 17:
+           Total number of students = Diksha's position from the left end + Trisha's position from the right end - 1
+                                     = 25 + 17 - 1
+                                     = 41
+      
+        Therefore, the total number of students in the class is 42.`
       },
       {
         id: 9,
-        question:
-          "In a group of 35 students, if Tom is ranked 5th from the top, what is his rank from the bottom?",
-        options: ["30th", "31st", "32nd", "33rd"],
-        correctAnswer: "31st",
-      },
-      {
+        template: "In a single row, there are some boys and all of them are facing north. Gaurav’s rank is 29th from the left end and Tarun’s rank is 27th from the right end. If 26 students are sitting in between them, find the number of students in the class.",
+        variables: {},
+        correctAnswerFormula: "82",
+        optionsFormula: [
+          "21",
+          "9",
+          "10",
+          "82"
+        ],
+        explanationTemplate: `To find the total number of students in the class, follow these steps:
+      
+        1. Determine the total number of students between Gaurav and Tarun:
+           Number of students between them = 26
+      
+        2. Calculate Tarun's position from the left end:
+           Tarun's position from the left end = Gaurav's position from the left end + Number of students between them + 1
+                                               = 29 + 26 + 1
+                                               = 56
+      
+        3. Calculate the total number of students in the class. Since Tarun's position from the right end is 27:
+           Total number of students = Tarun's position from the left end + Tarun's position from the right end - 1
+                                     = 56 + 27 - 1
+                                     = 82
+      
+        Therefore, the total number of students in the class is 82.`
+      }
+      , {
         id: 10,
-        question:
-          "If Anna is ranked 8th from the bottom in a class of 45 students, what is her rank from the top?",
-        options: ["36th", "37th", "38th", "39th"],
-        correctAnswer: "38th",
-      },
+        template: "In a class, Vijay’s rank is 34th from the left and Ajay’s rank is 37th from the right. If only Diwakar sits exactly in between them, what could be the minimum number of students in the class?",
+        variables: {},
+        correctAnswerFormula: "68",
+        optionsFormula: [
+          "59",
+          "37",
+          "68",
+          "Can’t be determined"
+        ],
+        explanationTemplate: `To find the minimum number of students in the class, follow these steps:
+          
+            1. Determine the number of students between Vijay and Ajay:
+               Since Diwakar sits exactly between Vijay and Ajay, the total number of students between Vijay and Ajay must be 1 (Diwakar) + 1 = 2.
+          
+            2. Calculate the total number of students in the class:
+               Total number of students = Vijay's rank from the left + Ajay's rank from the right + Number of students between them
+                                         = 34 + 37 + 1
+                                         = 72
+          
+            3. Since we need the minimum number, subtract 2 from the total number:
+               Minimum number of students = 72 - 4 (for the number of students between Vijay and Ajay)
+                                          = 68
+          
+            Therefore, the minimum number of students in the class is 68.`
+      }
+
+      ,
     ],
   },
   "series-completion": {
@@ -921,64 +1274,205 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question: "Find the next number in the series: 2, 4, 8, 16, ?",
-        options: ["32", "20", "18", "12"],
-        correctAnswer: "32",
+        template: "Find the next number in the series: 2, 4, 8, 16, ?",
+        variables: {},
+        correctAnswerFormula: "32",
+        optionsFormula: [
+          "24",
+          "28",
+          "30",
+          "32"
+        ],
+        explanationTemplate: `To find the next number in the series, observe the pattern:
+      
+        - The sequence is: 2, 4, 8, 16
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next number after 16 is 16 * 2 = 32.
+      
+        Hence, the next number in the series is 32.`
       },
       {
         id: 2,
-        question: "Find the missing number: 5, 10, 20, 40, ?",
-        options: ["80", "60", "50", "30"],
-        correctAnswer: "80",
+        template: "Find the missing number: 5, 10, 20, 40, ?",
+        variables: {},
+        correctAnswerFormula: "80",
+        optionsFormula: [
+          "60",
+          "70",
+          "80",
+          "90"
+        ],
+        explanationTemplate: `To find the missing number, observe the pattern:
+      
+        - The sequence is: 5, 10, 20, 40
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the missing number after 40 is 40 * 2 = 80.
+      
+        Hence, the missing number is 80.`
       },
       {
         id: 3,
-        question: "Complete the series: 3, 9, 27, 81, ?",
-        options: ["243", "162", "90", "54"],
-        correctAnswer: "243",
+        template: "Complete the series: 3, 9, 27, 81, ?",
+        variables: {},
+        correctAnswerFormula: "243",
+        optionsFormula: [
+          "162",
+          "216",
+          "243",
+          "324"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 3, 9, 27, 81
+        - Each number is multiplied by 3 to get the next number in the series.
+      
+        Therefore, the next number after 81 is 81 * 3 = 243.
+      
+        Hence, the number that completes the series is 243.`
       },
       {
         id: 4,
-        question: "Find the next term: 7, 14, 28, 56, ?",
-        options: ["112", "84", "60", "40"],
-        correctAnswer: "112",
+        template: "Find the next term: 7, 14, 28, 56, ?",
+        variables: {},
+        correctAnswerFormula: "112",
+        optionsFormula: [
+          "84",
+          "98",
+          "112",
+          "126"
+        ],
+        explanationTemplate: `To find the next term, observe the pattern:
+      
+        - The sequence is: 7, 14, 28, 56
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next term after 56 is 56 * 2 = 112.
+      
+        Hence, the next term in the series is 112.`
       },
       {
         id: 5,
-        question: "Complete the series: 4, 8, 16, 32, ?",
-        options: ["64", "48", "36", "24"],
-        correctAnswer: "64",
+        template: "Complete the series: 4, 8, 16, 32, ?",
+        variables: {},
+        correctAnswerFormula: "64",
+        optionsFormula: [
+          "48",
+          "56",
+          "64",
+          "72"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 4, 8, 16, 32
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next number after 32 is 32 * 2 = 64.
+      
+        Hence, the number that completes the series is 64.`
       },
       {
         id: 6,
-        question: "Find the missing number: 6, 12, 24, 48, ?",
-        options: ["96", "84", "60", "54"],
-        correctAnswer: "96",
+        template: "Find the missing number: 6, 12, 24, 48, ?",
+        variables: {},
+        correctAnswerFormula: "96",
+        optionsFormula: [
+          "72",
+          "84",
+          "96",
+          "108"
+        ],
+        explanationTemplate: `To find the missing number, observe the pattern:
+      
+        - The sequence is: 6, 12, 24, 48
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the missing number after 48 is 48 * 2 = 96.
+      
+        Hence, the missing number is 96.`
       },
       {
         id: 7,
-        question: "Complete the series: 1, 2, 4, 8, ?",
-        options: ["16", "12", "10", "6"],
-        correctAnswer: "16",
+        template: "Complete the series: 1, 2, 4, 8, ?",
+        variables: {},
+        correctAnswerFormula: "16",
+        optionsFormula: [
+          "12",
+          "14",
+          "16",
+          "18"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 1, 2, 4, 8
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next number after 8 is 8 * 2 = 16.
+      
+        Hence, the number that completes the series is 16.`
       },
       {
         id: 8,
-        question: "Find the next term: 11, 22, 44, 88, ?",
-        options: ["176", "120", "100", "64"],
-        correctAnswer: "176",
+        template: "Find the next term: 11, 22, 44, 88, ?",
+        variables: {},
+        correctAnswerFormula: "176",
+        optionsFormula: [
+          "132",
+          "154",
+          "176",
+          "198"
+        ],
+        explanationTemplate: `To find the next term, observe the pattern:
+      
+        - The sequence is: 11, 22, 44, 88
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next term after 88 is 88 * 2 = 176.
+      
+        Hence, the next term in the series is 176.`
       },
       {
         id: 9,
-        question: "Complete the series: 5, 15, 45, 135, ?",
-        options: ["405", "200", "150", "75"],
-        correctAnswer: "405",
+        template: "Complete the series: 5, 15, 45, 135, ?",
+        variables: {},
+        correctAnswerFormula: "405",
+        optionsFormula: [
+          "270",
+          "315",
+          "360",
+          "405"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 5, 15, 45, 135
+        - Each number is multiplied by 3 to get the next number in the series.
+      
+        Therefore, the next number after 135 is 135 * 3 = 405.
+      
+        Hence, the number that completes the series is 405.`
       },
       {
         id: 10,
-        question: "Find the next number: 8, 16, 32, 64, ?",
-        options: ["128", "80", "70", "50"],
-        correctAnswer: "128",
-      },
+        template: "Find the next number: 8, 16, 32, 64, ?",
+        variables: {},
+        correctAnswerFormula: "128",
+        optionsFormula: [
+          "96",
+          "108",
+          "120",
+          "128"
+        ],
+        explanationTemplate: `To find the next number, observe the pattern:
+      
+        - The sequence is: 8, 16, 32, 64
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next number after 64 is 64 * 2 = 128.
+      
+        Hence, the next number in the series is 128.`
+      }
+      ,
     ],
   },
   "letter-and-symbol-series": {
@@ -1031,63 +1525,215 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question: "Find the next letter in the series: A, C, E, G, ?",
-        options: ["I", "H", "J", "K"],
-        correctAnswer: "I",
+        template: "Find the next letter in the series: A, C, E, G, ?",
+        variables: {},
+        correctAnswerFormula: "I",
+        optionsFormula: [
+          "H",
+          "I",
+          "J",
+          "K"
+        ],
+        explanationTemplate: `To find the next letter in the series, observe the pattern:
+      
+        - The sequence is: A, C, E, G
+        - The position of each letter in the alphabet is: A(1), C(3), E(5), G(7)
+        - The pattern is an increment of 2 positions in the alphabet.
+      
+        Therefore, the next letter after G (7) is I (9), following the same pattern.
+      
+        Hence, the next letter in the series is I.`
       },
       {
         id: 2,
-        question: "Complete the series: P, R, T, V, ?",
-        options: ["X", "U", "W", "Y"],
-        correctAnswer: "X",
+        template: "Complete the series: P, R, T, V, ?",
+        variables: {},
+        correctAnswerFormula: "X",
+        optionsFormula: [
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: P, R, T, V
+        - The positions of these letters in the alphabet are: P(16), R(18), T(20), V(22)
+        - The pattern is an increment of 2 positions in the alphabet.
+      
+        Therefore, the next letter after V (22) is X (24), following the same pattern.
+      
+        Hence, the letter that completes the series is X.`
       },
       {
         id: 3,
-        question: "Find the missing letter: B, D, F, H, ?",
-        options: ["J", "I", "K", "L"],
-        correctAnswer: "J",
+        template: "Find the missing letter: B, D, F, H, ?",
+        variables: {},
+        correctAnswerFormula: "J",
+        optionsFormula: [
+          "I",
+          "J",
+          "K",
+          "L"
+        ],
+        explanationTemplate: `To find the missing letter, observe the pattern:
+      
+        - The sequence is: B, D, F, H
+        - The positions of these letters in the alphabet are: B(2), D(4), F(6), H(8)
+        - The pattern is an increment of 2 positions in the alphabet.
+      
+        Therefore, the next letter after H (8) is J (10), following the same pattern.
+      
+        Hence, the missing letter in the series is J.`
       },
       {
         id: 4,
-        question: "Complete the series: Z, X, V, T, ?",
-        options: ["R", "S", "U", "Q"],
-        correctAnswer: "R",
+        template: "Complete the series: Z, X, V, T, ?",
+        variables: {},
+        correctAnswerFormula: "R",
+        optionsFormula: [
+          "R",
+          "S",
+          "U",
+          "W"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: Z, X, V, T
+        - The positions of these letters in the alphabet are: Z(26), X(24), V(22), T(20)
+        - The pattern is a decrement of 2 positions in the alphabet.
+      
+        Therefore, the next letter after T (20) is R (18), following the same pattern.
+      
+        Hence, the letter that completes the series is R.`
       },
       {
         id: 5,
-        question: "Find the next symbol in the series: @, #, $, %, ?",
-        options: ["&", "!", "*", "+"],
-        correctAnswer: "&",
+        template: "Find the next symbol in the series: @, #, $, %, ?",
+        variables: {},
+        correctAnswerFormula: "^",
+        optionsFormula: [
+          "&",
+          "^",
+          "*",
+          "+"
+        ],
+        explanationTemplate: `To find the next symbol in the series, observe the pattern:
+      
+        - The sequence is: @, #, $, %, ?
+        - The symbols are commonly used in the order of increasing keyboard symbols.
+      
+        Therefore, the next symbol in the series, following the pattern, is ^.
+      
+        Hence, the next symbol in the series is ^.`
       },
       {
         id: 6,
-        question: "Complete the series: *, &, %, @, ?",
-        options: ["#", "$", "!", "+"],
-        correctAnswer: "#",
+        template: "Complete the series: *, &, %, @, ?",
+        variables: {},
+        correctAnswerFormula: "#",
+        optionsFormula: [
+          "#",
+          "^",
+          "+",
+          "!"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: *, &, %, @, ?
+        - The symbols are commonly used in the order of increasing keyboard symbols.
+      
+        The pattern suggests using symbols commonly found on a keyboard.
+      
+        Therefore, the next symbol in the series, following the pattern, is #.
+      
+        Hence, the symbol that completes the series is #.`
       },
       {
         id: 7,
-        question: "Find the missing symbol: ^, *, &, %, ?",
-        options: ["$", "#", "!", "+"],
-        correctAnswer: "$",
+        template: "Find the missing symbol: ^, *, &, %, ?",
+        variables: {},
+        correctAnswerFormula: "$",
+        optionsFormula: [
+          "$",
+          "#",
+          "@",
+          "+"
+        ],
+        explanationTemplate: `To find the missing symbol, observe the pattern:
+      
+        - The sequence is: ^, *, &, %, ?
+        - The symbols are commonly used in the order of increasing keyboard symbols.
+      
+        The pattern suggests using symbols commonly found on a keyboard and following a sequence.
+      
+        Therefore, the missing symbol in the series, following the pattern, is $.
+      
+        Hence, the missing symbol is $.`
       },
       {
         id: 8,
-        question: "Complete the series: !, @, #, $, ?",
-        options: ["%", "^", "&", "*"],
-        correctAnswer: "%",
+        template: "Complete the series: !, @, #, $, ?",
+        variables: {},
+        correctAnswerFormula: "%",
+        optionsFormula: [
+          "%",
+          "^",
+          "&",
+          "*"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: !, @, #, $, ?
+        - The symbols are commonly used on a keyboard in a sequential order.
+      
+        The pattern suggests using symbols commonly found on a keyboard, with increasing complexity.
+      
+        Therefore, the next symbol in the series, following the pattern, is %.
+      
+        Hence, the symbol that completes the series is %.`
       },
       {
         id: 9,
-        question: "Find the next letter: C, F, I, L, ?",
-        options: ["O", "M", "P", "N"],
-        correctAnswer: "O",
+        template: "Find the next letter: C, F, I, L, ?",
+        variables: {},
+        correctAnswerFormula: "O",
+        optionsFormula: [
+          "M",
+          "N",
+          "O",
+          "P"
+        ],
+        explanationTemplate: `To find the next letter in the series, observe the pattern:
+      
+        - The sequence is: C, F, I, L
+        - The positions of these letters in the alphabet are: C(3), F(6), I(9), L(12)
+        - The pattern is an increment of 3 positions in the alphabet.
+      
+        Therefore, the next letter after L (12) is O (15), following the same pattern.
+      
+        Hence, the next letter in the series is O.`
       },
       {
         id: 10,
-        question: "Complete the series: M, Q, U, Y, ?",
-        options: ["C", "A", "B", "D"],
-        correctAnswer: "C",
+        template: "Complete the series: M, Q, U, Y, ?",
+        variables: {},
+        correctAnswerFormula: "C",
+        optionsFormula: [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: M, Q, U, Y
+        - The positions of these letters in the alphabet are: M(13), Q(17), U(21), Y(25)
+        - The pattern is an increment of 4 positions in the alphabet.
+      
+        Therefore, the next letter after Y (25) is C (3), following the same pattern with wrap-around in the alphabet.
+      
+        Hence, the letter that completes the series is C.`
       },
     ],
   },
@@ -1141,63 +1787,207 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question: "Find the next number in the series: 2, 4, 6, 8, ?",
-        options: ["10", "12", "14", "16"],
-        correctAnswer: "10",
+        template: "Find the next number in the series: 2, 4, 6, 8, ?",
+        variables: {},
+        correctAnswerFormula: "10",
+        optionsFormula: [
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        explanationTemplate: `To find the next number, observe the pattern:
+      
+        - The sequence is: 2, 4, 6, 8
+        - Each number is incremented by 2 to get the next number in the series.
+      
+        Therefore, the next number after 8 is 8 + 2 = 10.
+      
+        Hence, the next number in the series is 10.`
       },
       {
         id: 2,
-        question: "Find the missing number: 3, 6, 9, 12, ?",
-        options: ["15", "14", "18", "21"],
-        correctAnswer: "15",
+        template: "Find the missing number: 3, 6, 9, 12, ?",
+        variables: {},
+        correctAnswerFormula: "15",
+        optionsFormula: [
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        explanationTemplate: `To find the missing number, observe the pattern:
+      
+        - The sequence is: 3, 6, 9, 12
+        - Each number is incremented by 3 to get the next number in the series.
+      
+        Therefore, the missing number after 12 is 12 + 3 = 15.
+      
+        Hence, the missing number is 15.`
       },
       {
         id: 3,
-        question: "Complete the series: 5, 10, 15, 20, ?",
-        options: ["25", "30", "35", "40"],
-        correctAnswer: "25",
+        template: "Complete the series: 5, 10, 15, 20, ?",
+        variables: {},
+        correctAnswerFormula: "25",
+        optionsFormula: [
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 5, 10, 15, 20
+        - Each number is incremented by 5 to get the next number in the series.
+      
+        Therefore, the next number after 20 is 20 + 5 = 25.
+      
+        Hence, the number that completes the series is 25.`
       },
       {
         id: 4,
-        question: "Find the next term: 7, 14, 21, 28, ?",
-        options: ["35", "42", "49", "56"],
-        correctAnswer: "35",
+        template: "Find the next term: 7, 14, 21, 28, ?",
+        variables: {},
+        correctAnswerFormula: "35",
+        optionsFormula: [
+          "30",
+          "32",
+          "34",
+          "35"
+        ],
+        explanationTemplate: `To find the next term, observe the pattern:
+      
+        - The sequence is: 7, 14, 21, 28
+        - Each number is incremented by 7 to get the next number in the series.
+      
+        Therefore, the next term after 28 is 28 + 7 = 35.
+      
+        Hence, the next term in the series is 35.`
       },
       {
         id: 5,
-        question: "Complete the series: 1, 4, 9, 16, ?",
-        options: ["25", "20", "30", "36"],
-        correctAnswer: "25",
+        template: "Complete the series: 1, 4, 9, 16, ?",
+        variables: {},
+        correctAnswerFormula: "25",
+        optionsFormula: [
+          "20",
+          "21",
+          "22",
+          "25"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 1, 4, 9, 16
+        - These are perfect squares: 1^2, 2^2, 3^2, 4^2.
+      
+        Therefore, the next number in the series is 5^2 = 25.
+      
+        Hence, the number that completes the series is 25.`
       },
       {
         id: 6,
-        question: "Find the missing number: 8, 16, 24, 32, ?",
-        options: ["40", "48", "56", "64"],
-        correctAnswer: "40",
+        template: "Find the missing number: 8, 16, 24, 32, ?",
+        variables: {},
+        correctAnswerFormula: "40",
+        optionsFormula: [
+          "36",
+          "38",
+          "40",
+          "42"
+        ],
+        explanationTemplate: `To find the missing number, observe the pattern:
+      
+        - The sequence is: 8, 16, 24, 32
+        - Each number is incremented by 8 to get the next number in the series.
+      
+        Therefore, the missing number after 32 is 32 + 8 = 40.
+      
+        Hence, the missing number is 40.`
       },
       {
         id: 7,
-        question: "Complete the series: 2, 3, 5, 8, ?",
-        options: ["13", "10", "15", "20"],
-        correctAnswer: "13",
+        template: "Complete the series: 2, 3, 5, 8, ?",
+        variables: {},
+        correctAnswerFormula: "13",
+        optionsFormula: [
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 2, 3, 5, 8
+        - The pattern is that each number is the sum of the previous two numbers:
+          - 2 + 3 = 5
+          - 3 + 5 = 8
+          - Therefore, the next number is 5 + 8 = 13
+      
+        Hence, the number that completes the series is 13.`
       },
       {
         id: 8,
-        question: "Find the next term: 1, 1, 2, 3, 5, 8, ?",
-        options: ["13", "10", "12", "15"],
-        correctAnswer: "13",
+        template: "Find the next term: 1, 1, 2, 3, 5, 8, ?",
+        variables: {},
+        correctAnswerFormula: "13",
+        optionsFormula: [
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        explanationTemplate: `To find the next term, observe the pattern:
+      
+        - The sequence is: 1, 1, 2, 3, 5, 8
+        - This is the Fibonacci sequence where each number is the sum of the two preceding numbers:
+          - 1 + 1 = 2
+          - 1 + 2 = 3
+          - 2 + 3 = 5
+          - 3 + 5 = 8
+          - Therefore, the next number is 5 + 8 = 13
+      
+        Hence, the next term in the series is 13.`
       },
       {
         id: 9,
-        question: "Complete the series: 10, 20, 40, 80, ?",
-        options: ["160", "120", "100", "200"],
-        correctAnswer: "160",
+        template: "Complete the series: 10, 20, 40, 80, ?",
+        variables: {},
+        correctAnswerFormula: "160",
+        optionsFormula: [
+          "120",
+          "140",
+          "160",
+          "180"
+        ],
+        explanationTemplate: `To complete the series, observe the pattern:
+      
+        - The sequence is: 10, 20, 40, 80
+        - Each number is multiplied by 2 to get the next number in the series.
+      
+        Therefore, the next number after 80 is 80 * 2 = 160.
+      
+        Hence, the number that completes the series is 160.`
       },
       {
         id: 10,
-        question: "Find the next number: 3, 9, 27, 81, ?",
-        options: ["243", "120", "90", "70"],
-        correctAnswer: "243",
+        template: "Find the next number: 3, 9, 27, 81, ?",
+        variables: {},
+        correctAnswerFormula: "243",
+        optionsFormula: [
+          "162",
+          "216",
+          "243",
+          "324"
+        ],
+        explanationTemplate: `To find the next number, observe the pattern:
+      
+        - The sequence is: 3, 9, 27, 81
+        - Each number is multiplied by 3 to get the next number in the series.
+      
+        Therefore, the next number after 81 is 81 * 3 = 243.
+      
+        Hence, the next number in the series is 243.`
       },
     ],
   },
@@ -1251,39 +2041,75 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Statement: The company reported a 20% increase in profits this year.\nJudgement: The company will continue to grow at the same rate next year.",
-        options: ["Strong", "Weak"],
-        correctAnswer: "Weak",
+        template: "Statement: The company reported a 20% increase in profits this year.\nJudgement: The company will continue to grow at the same rate next year.",
+        variables: {},
+        correctAnswerFormula: "Cannot be determined",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The statement indicates that the company experienced a 20% increase in profits this year, but it does not provide information about future performance. The judgement that the company will continue to grow at the same rate next year is speculative and cannot be confirmed based on the given information.
+      
+        Therefore, the correct answer is "Cannot be determined."`
       },
       {
         id: 2,
-        question:
-          "Statement: The new policy has reduced the number of traffic accidents.\nJudgement: The policy is effective in improving road safety.",
-        options: ["Strong", "Weak"],
-        correctAnswer: "Strong",
+        template: "Statement: The new policy has reduced the number of traffic accidents.\nJudgement: The policy is effective in improving road safety.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The statement indicates that the new policy has led to a reduction in the number of traffic accidents. This reduction suggests that the policy is having a positive impact on road safety. While further evidence could strengthen the conclusion, the observed reduction supports the judgement that the policy is effective in improving road safety.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 3,
-        question:
-          "Statement: The book received positive reviews from critics.\nJudgement: The book is a bestseller.",
-        options: ["Strong", "Weak"],
-        correctAnswer: "Weak",
+        template: "Statement: The book received positive reviews from critics.\nJudgement: The book is a bestseller.",
+        variables: {},
+        correctAnswerFormula: "Cannot be determined",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The statement indicates that the book received positive reviews from critics, but it does not provide information about the book's sales performance. Positive reviews do not necessarily imply that the book is a bestseller. Therefore, there is not enough information to determine if the book is a bestseller based on the given statement.
+      
+        Therefore, the correct answer is "Cannot be determined."`
       },
       {
         id: 4,
-        question:
-          "Statement: The restaurant has a five-star rating on a review website.\nJudgement: The restaurant offers excellent food and service.",
-        options: ["Strong", "Weak"],
-        correctAnswer: "Strong",
+        template: "Statement: The restaurant has a five-star rating on a review website.\nJudgement: The restaurant offers excellent food and service.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `A five-star rating on a review website generally indicates high praise from reviewers, suggesting that the restaurant offers excellent food and service. While individual experiences may vary, a five-star rating typically reflects overall positive feedback in these areas.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 5,
-        question:
-          "Statement: The candidate has a degree from a prestigious university.\nJudgement: The candidate is well-qualified for the job.",
-        options: ["Strong", "Weak"],
-        correctAnswer: "Strong",
-      },
+        template: "Statement: The candidate has a degree from a prestigious university.\nJudgement: The candidate is well-qualified for the job.",
+        variables: {},
+        correctAnswerFormula: "Cannot be determined",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `Having a degree from a prestigious university suggests that the candidate has received high-quality education, which can be an important factor in qualifications. However, being well-qualified for a job depends on additional factors such as relevant experience, skills, and specific job requirements. The statement alone does not provide enough information to fully determine if the candidate is well-qualified for the job.
+      
+        Therefore, the correct answer is "Cannot be determined."`
+      }
+      ,
     ],
   },
   "analyzing-arguments": {
@@ -1336,38 +2162,103 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Argument: All students who study hard get good grades. John studies hard. Therefore, John will get good grades.\nIs the argument valid?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Argument: All students who study hard get good grades. John studies hard. Therefore, John will get good grades.\nIs the argument valid?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The argument is valid because it follows the logical form of a syllogism:
+        
+        - Premise 1: All students who study hard get good grades.
+        - Premise 2: John studies hard.
+        - Conclusion: Therefore, John will get good grades.
+      
+        Since the premises logically support the conclusion, the argument is valid.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 2,
-        question:
-          "Argument: Some fruits are apples. All apples are sweet. Therefore, some fruits are sweet.\nIs the argument valid?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Argument: Some fruits are apples. All apples are sweet. Therefore, some fruits are sweet.\nIs the argument valid?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The argument is valid because it follows the logical structure of a syllogism:
+      
+        - Premise 1: Some fruits are apples.
+        - Premise 2: All apples are sweet.
+        - Conclusion: Therefore, some fruits are sweet.
+      
+        If some fruits are apples and all apples are sweet, it logically follows that at least some of those fruits (the apples) are sweet. Therefore, the argument is valid.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 3,
-        question:
-          "Argument: If it rains, the ground will be wet. It did not rain. Therefore, the ground is not wet.\nIs the argument valid?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Argument: If it rains, the ground will be wet. It did not rain. Therefore, the ground is not wet.\nIs the argument valid?",
+        variables: {},
+        correctAnswerFormula: "No",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The argument is not valid because it commits the fallacy of denying the antecedent:
+      
+        - Premise 1: If it rains, the ground will be wet.
+        - Premise 2: It did not rain.
+        - Conclusion: Therefore, the ground is not wet.
+      
+        The argument incorrectly assumes that the only way the ground could be wet is if it rains. However, there could be other reasons for the ground being wet (e.g., someone watering the garden). Therefore, the argument is not logically valid.
+      
+        Therefore, the correct answer is "No."`
       },
       {
         id: 4,
-        question:
-          "Argument: All cats are animals. Some animals are pets. Therefore, all cats are pets.\nIs the argument valid?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Argument: All cats are animals. Some animals are pets. Therefore, all cats are pets.\nIs the argument valid?",
+        variables: {},
+        correctAnswerFormula: "No",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The argument is not valid because it commits the fallacy of affirming the consequent:
+      
+        - Premise 1: All cats are animals.
+        - Premise 2: Some animals are pets.
+        - Conclusion: Therefore, all cats are pets.
+      
+        The conclusion assumes that because some animals are pets, all cats must be pets, which is not logically supported by the premises. There could be cats that are not pets. Thus, the argument does not logically follow from the premises.
+      
+        Therefore, the correct answer is "No."`
       },
       {
         id: 5,
-        question:
-          "Argument: All birds can fly. Penguins are birds. Therefore, penguins can fly.\nIs the argument valid?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Argument: All birds can fly. Penguins are birds. Therefore, penguins can fly.\nIs the argument valid?",
+        variables: {},
+        correctAnswerFormula: "No",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The argument is not valid because it is based on a false premise:
+      
+        - Premise 1: All birds can fly. (This premise is false, as not all birds can fly.)
+        - Premise 2: Penguins are birds.
+        - Conclusion: Therefore, penguins can fly.
+      
+        Even if penguins are birds, the claim that all birds can fly is incorrect. In reality, penguins cannot fly. Therefore, the argument does not logically follow from the premises.
+      
+        Therefore, the correct answer is "No."`
       },
     ],
   },
@@ -1421,38 +2312,73 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Statement: The company should invest in new technology to improve efficiency.\nAssumption: New technology will improve efficiency.",
-        options: ["Assumption is implicit", "Assumption is not implicit"],
-        correctAnswer: "Assumption is implicit",
+        template: "Statement: The company should invest in new technology to improve efficiency.\nAssumption: New technology will improve efficiency.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The assumption is that new technology will improve efficiency. For the statement to be valid, this assumption must hold true. The statement suggests investing in new technology with the expectation of improved efficiency. Therefore, the assumption that new technology will improve efficiency is necessary for the statement to make sense.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 2,
-        question:
-          "Statement: The government should reduce taxes to increase consumer spending.\nAssumption: Reducing taxes will increase consumer spending.",
-        options: ["Assumption is implicit", "Assumption is not implicit"],
-        correctAnswer: "Assumption is implicit",
+        template: "Statement: The government should reduce taxes to increase consumer spending.\nAssumption: Reducing taxes will increase consumer spending.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The assumption is that reducing taxes will lead to an increase in consumer spending. For the statement to be valid, this assumption must be true. The statement suggests that reducing taxes is a means to achieve higher consumer spending, so the assumption that reducing taxes will indeed increase consumer spending is necessary for the statement to be justified.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 3,
-        question:
-          "Statement: The school needs to hire more teachers to improve education quality.\nAssumption: Hiring more teachers will improve education quality.",
-        options: ["Assumption is implicit", "Assumption is not implicit"],
-        correctAnswer: "Assumption is implicit",
+        template: "Statement: The school needs to hire more teachers to improve education quality.\nAssumption: Hiring more teachers will improve education quality.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The assumption is that hiring more teachers will lead to an improvement in education quality. For the statement to be valid, this assumption must be true. The statement implies that increasing the number of teachers is a method to enhance education quality, so the assumption that hiring more teachers will improve education quality is necessary for the statement to be valid.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 4,
-        question:
-          "Statement: The city should build more parks to promote healthy living.\nAssumption: Building more parks will promote healthy living.",
-        options: ["Assumption is implicit", "Assumption is not implicit"],
-        correctAnswer: "Assumption is implicit",
+        template: "Statement: The city should build more parks to promote healthy living.\nAssumption: Building more parks will promote healthy living.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The assumption is that building more parks will encourage or support healthy living. For the statement to be valid, this assumption must hold true. The statement suggests that constructing additional parks is a strategy to promote healthy living, so the assumption that building more parks will indeed lead to healthier lifestyles is essential for the statement's validity.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 5,
-        question:
-          "Statement: The restaurant should lower prices to attract more customers.\nAssumption: Lowering prices will attract more customers.",
-        options: ["Assumption is implicit", "Assumption is not implicit"],
-        correctAnswer: "Assumption is implicit",
+        template: "Statement: The restaurant should lower prices to attract more customers.\nAssumption: Lowering prices will attract more customers.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The assumption is that reducing prices will result in an increase in the number of customers. For the statement to be valid, this assumption must be true. The statement proposes lowering prices as a means to attract more customers, so the assumption that lowering prices will indeed lead to more customers is necessary for the statement to be justified.
+      
+        Therefore, the correct answer is "Yes."`
       },
     ],
   },
@@ -1506,38 +2432,73 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Problem: The company's sales have been declining for the past three quarters.\nCourse of Action: The company should conduct market research to identify the reasons for the decline.",
-        options: ["Correct", "Incorrect"],
-        correctAnswer: "Correct",
+        template: "Problem: The company's sales have been declining for the past three quarters.\nCourse of Action: The company should conduct market research to identify the reasons for the decline.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The course of action suggests conducting market research to understand the reasons behind the declining sales. Given that the problem is a decline in sales, identifying the underlying reasons through market research is a relevant and appropriate action to address the issue. Therefore, the proposed course of action is sensible and justified.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 2,
-        question:
-          "Problem: The city has been experiencing heavy traffic congestion.\nCourse of Action: The city should invest in public transportation to reduce traffic.",
-        options: ["Correct", "Incorrect"],
-        correctAnswer: "Correct",
+        template: "Problem: The city has been experiencing heavy traffic congestion.\nCourse of Action: The city should invest in public transportation to reduce traffic.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The course of action suggests investing in public transportation as a solution to the problem of heavy traffic congestion. Improving public transportation can help reduce the number of vehicles on the road, which in turn may alleviate traffic congestion. Therefore, this action is a relevant and appropriate response to the problem.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 3,
-        question:
-          "Problem: The school is facing a shortage of teachers.\nCourse of Action: The school should increase salaries to attract more teachers.",
-        options: ["Correct", "Incorrect"],
-        correctAnswer: "Correct",
+        template: "Problem: The school is facing a shortage of teachers.\nCourse of Action: The school should increase salaries to attract more teachers.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The course of action suggests increasing salaries as a way to address the shortage of teachers. Higher salaries can be an effective incentive to attract more teachers. Therefore, this course of action is a relevant and appropriate response to the problem.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 4,
-        question:
-          "Problem: The restaurant has been receiving complaints about food quality.\nCourse of Action: The restaurant should improve food quality to satisfy customers.",
-        options: ["Correct", "Incorrect"],
-        correctAnswer: "Correct",
+        template: "Problem: The restaurant has been receiving complaints about food quality.\nCourse of Action: The restaurant should improve food quality to satisfy customers.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The course of action suggests improving food quality as a response to complaints about it. Addressing the complaints by enhancing food quality is a relevant and appropriate measure to satisfy customers and resolve the issue.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 5,
-        question:
-          "Problem: The company's website has been experiencing frequent downtime.\nCourse of Action: The company should upgrade its server infrastructure to improve website reliability.",
-        options: ["Correct", "Incorrect"],
-        correctAnswer: "Correct",
+        template: "Problem: The company's website has been experiencing frequent downtime.\nCourse of Action: The company should upgrade its server infrastructure to improve website reliability.",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No",
+          "Cannot be determined"
+        ],
+        explanationTemplate: `The course of action suggests upgrading server infrastructure to address frequent website downtime. Improving server infrastructure is a relevant and appropriate measure to enhance website reliability and reduce downtime.
+      
+        Therefore, the correct answer is "Yes."`
       },
     ],
   },
@@ -1591,37 +2552,68 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Statement: All dogs are animals.\nConclusion: All animals are dogs.",
-        options: ["Conclusion follows", "Conclusion does not follow"],
-        correctAnswer: "Conclusion does not follow",
+        template: "Statement: All dogs are animals.\nConclusion: All animals are dogs.",
+        variables: {},
+        correctAnswerFormula: "Conclusion does not follow",
+        optionsFormula: [
+          "Conclusion follows",
+          "Conclusion does not follow"
+        ],
+        explanationTemplate: `The statement "All dogs are animals" indicates that dogs are a subset of animals, but it does not imply that all animals are dogs. The conclusion "All animals are dogs" does not follow logically from the statement.
+      
+        Therefore, the correct answer is "Conclusion does not follow."`
       },
       {
         id: 2,
-        question:
-          "Statement: Some fruits are apples.\nConclusion: Some apples are fruits.",
-        options: ["Conclusion follows", "Conclusion does not follow"],
-        correctAnswer: "Conclusion follows",
+        template: "Statement: Some fruits are apples.\nConclusion: Some apples are fruits.",
+        variables: {},
+        correctAnswerFormula: "Conclusion follows",
+        optionsFormula: [
+          "Conclusion follows",
+          "Conclusion does not follow"
+        ],
+        explanationTemplate: `The statement "Some fruits are apples" indicates that there is an overlap between fruits and apples, meaning that some apples are indeed fruits. Therefore, the conclusion "Some apples are fruits" logically follows from the statement.
+      
+        Therefore, the correct answer is "Conclusion follows."`
       },
       {
         id: 3,
-        question:
-          "Statement: All cars are vehicles.\nConclusion: Some vehicles are cars.",
-        options: ["Conclusion follows", "Conclusion does not follow"],
-        correctAnswer: "Conclusion follows",
+        template: "Statement: All cars are vehicles.\nConclusion: Some vehicles are cars.",
+        variables: {},
+        correctAnswerFormula: "Conclusion follows",
+        optionsFormula: [
+          "Conclusion follows",
+          "Conclusion does not follow"
+        ],
+        explanationTemplate: `The statement "All cars are vehicles" means that cars are a subset of vehicles. This implies that there are some vehicles that are cars. Therefore, the conclusion "Some vehicles are cars" logically follows from the statement.
+      
+        Therefore, the correct answer is "Conclusion follows."`
       },
       {
         id: 4,
-        question: "Statement: No cats are dogs.\nConclusion: No dogs are cats.",
-        options: ["Conclusion follows", "Conclusion does not follow"],
-        correctAnswer: "Conclusion follows",
+        template: "Statement: No cats are dogs.\nConclusion: No dogs are cats.",
+        variables: {},
+        correctAnswerFormula: "Conclusion follows",
+        optionsFormula: [
+          "Conclusion follows",
+          "Conclusion does not follow"
+        ],
+        explanationTemplate: `The statement "No cats are dogs" means that there is no overlap between cats and dogs; they are entirely separate categories. Consequently, if no cats are dogs, it must also be true that no dogs are cats. This is the contrapositive of the original statement.
+      
+        Therefore, the correct answer is "Conclusion follows."`
       },
       {
         id: 5,
-        question:
-          "Statement: Some books are novels.\nConclusion: All novels are books.",
-        options: ["Conclusion follows", "Conclusion does not follow"],
-        correctAnswer: "Conclusion follows",
+        template: "Statement: Some books are novels.\nConclusion: All novels are books.",
+        variables: {},
+        correctAnswerFormula: "Conclusion does not follow",
+        optionsFormula: [
+          "Conclusion follows",
+          "Conclusion does not follow"
+        ],
+        explanationTemplate: `The statement "Some books are novels" means that there is an overlap between books and novels, but it does not provide information about the relationship of all novels to books. To conclude that "All novels are books" would require that every novel falls under the category of books, which is not supported by the initial statement.
+      
+        Therefore, the correct answer is "Conclusion does not follow."`
       },
     ],
   },
@@ -1675,38 +2667,88 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Event: It rained heavily last night.\nEffect: The streets are flooded.\nIs this a cause and effect relationship?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Event: It rained heavily last night.\nEffect: The streets are flooded.\nIs this a cause and effect relationship?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `
+      To determine if there is a cause and effect relationship between the event and the effect, we need to consider whether the event directly leads to the effect. 
+      
+      In this case, the event is "It rained heavily last night," and the effect is "The streets are flooded." Heavy rain can indeed cause streets to become flooded, demonstrating a cause and effect relationship.
+      
+      Therefore, the correct answer is "Yes."
+      `
       },
       {
         id: 2,
-        question:
-          "Event: The power went out.\nEffect: The refrigerator stopped working.\nIs this a cause and effect relationship?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Event: The power went out.\nEffect: The refrigerator stopped working.\nIs this a cause and effect relationship?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `
+      To determine if there is a cause and effect relationship between the event and the effect, we need to assess whether the event directly leads to the effect.
+      
+      In this case, the event is "The power went out," and the effect is "The refrigerator stopped working." When the power goes out, it causes electrical appliances, such as refrigerators, to stop functioning. This demonstrates a direct cause and effect relationship.
+      
+      Therefore, the correct answer is "Yes."
+      `
       },
       {
         id: 3,
-        question:
-          "Event: He studied hard for the exam.\nEffect: He scored high marks.\nIs this a cause and effect relationship?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Event: He studied hard for the exam.\nEffect: He scored high marks.\nIs this a cause and effect relationship?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `
+      To determine if there is a cause and effect relationship between the event and the effect, we need to assess whether the event directly leads to the effect.
+      
+      In this case, the event is "He studied hard for the exam," and the effect is "He scored high marks." Studying hard is generally known to improve performance and increase the likelihood of scoring high marks on an exam. This demonstrates a cause and effect relationship.
+      
+      Therefore, the correct answer is "Yes."
+      `
       },
       {
         id: 4,
-        question:
-          "Event: She forgot her umbrella.\nEffect: She got wet in the rain.\nIs this a cause and effect relationship?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Event: She forgot her umbrella.\nEffect: She got wet in the rain.\nIs this a cause and effect relationship?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `
+      To determine if there is a cause and effect relationship between the event and the effect, we need to assess whether the event directly leads to the effect.
+      
+      In this case, the event is "She forgot her umbrella," and the effect is "She got wet in the rain." Forgetting an umbrella in the rain typically leads to getting wet because the umbrella serves as protection from the rain.
+      
+      Therefore, the correct answer is "Yes."
+      `
       },
       {
         id: 5,
-        question:
-          "Event: The company increased its marketing budget.\nEffect: Sales decreased.\nIs this a cause and effect relationship?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Event: The company increased its marketing budget.\nEffect: Sales decreased.\nIs this a cause and effect relationship?",
+        variables: {},
+        correctAnswerFormula: "No",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `
+      To determine if there is a cause and effect relationship between the event and the effect, we need to assess whether the event directly leads to the effect.
+      
+      In this case, the event is "The company increased its marketing budget," and the effect is "Sales decreased." Typically, increasing a marketing budget is intended to boost sales, so a decrease in sales despite the increase in marketing budget suggests that there may be other factors at play or that the expected effect did not occur. 
+      
+      Therefore, the correct answer is "No."
+      `
       },
     ],
   },
@@ -1760,38 +2802,68 @@ const topicsData = {
     practiceQuestions: [
       {
         id: 1,
-        question:
-          "Text: The story revolves around a young girl who overcomes various obstacles to achieve her dreams.\nTheme: Perseverance.\nIs this the correct theme?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Event: The company increased its marketing budget.\nEffect: Sales decreased.\nIs this a cause and effect relationship?",
+        variables: {},
+        correctAnswerFormula: "No",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `Increasing the marketing budget is generally intended to boost sales, not decrease them. If the effect is a decrease in sales, it suggests that there may be another factor at play or that the increased budget did not achieve its intended purpose. Therefore, this is not a straightforward cause and effect relationship.
+      
+        Therefore, the correct answer is "No".`
       },
       {
         id: 2,
-        question:
-          "Text: The movie depicts the impact of war on soldiers and their families.\nTheme: Courage.\nIs this the correct theme?",
-        options: ["Yes", "No"],
-        correctAnswer: "No",
+        template: "Text: The movie depicts the impact of war on soldiers and their families.\nTheme: Courage.\nIs this the correct theme?",
+        variables: {},
+        correctAnswerFormula: "No",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `The theme of a movie should accurately reflect its central message or underlying ideas. The provided text indicates that the movie focuses on the impact of war on soldiers and their families, which suggests themes such as trauma, loss, or resilience rather than courage alone.
+      
+        Therefore, the correct answer is "No."`
       },
       {
         id: 3,
-        question:
-          "Text: The poem explores the beauty of nature and the fleeting nature of time.\nTheme: Transience.\nIs this the correct theme?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Text: The poem explores the beauty of nature and the fleeting nature of time.\nTheme: Transience.\nIs this the correct theme?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `The theme of "Transience" refers to the impermanence and fleeting nature of life, which aligns well with the poem's exploration of the beauty of nature and the transient nature of time. Both elements—nature's beauty and the passage of time—support the theme of transience.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 4,
-        question:
-          "Text: The article discusses the importance of honesty in personal and professional relationships.\nTheme: Integrity.\nIs this the correct theme?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Text: The article discusses the importance of honesty in personal and professional relationships.\nTheme: Integrity.\nIs this the correct theme?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `The theme of "Integrity" encompasses the concept of honesty, which is crucial in both personal and professional relationships. Since the article highlights the significance of honesty, which is a core component of integrity, the theme is accurately represented.
+      
+        Therefore, the correct answer is "Yes."`
       },
       {
         id: 5,
-        question:
-          "Text: The novel portrays the struggles of an immigrant family adapting to a new country.\nTheme: Resilience.\nIs this the correct theme?",
-        options: ["Yes", "No"],
-        correctAnswer: "Yes",
+        template: "Text: The novel portrays the struggles of an immigrant family adapting to a new country.\nTheme: Resilience.\nIs this the correct theme?",
+        variables: {},
+        correctAnswerFormula: "Yes",
+        optionsFormula: [
+          "Yes",
+          "No"
+        ],
+        explanationTemplate: `The theme of "Resilience" is appropriate for a novel that depicts the challenges faced by an immigrant family adjusting to a new country. Resilience involves overcoming difficulties and adapting to change, which aligns with the struggles described in the novel.
+      
+        Therefore, the correct answer is "Yes."`
       },
     ],
   },
