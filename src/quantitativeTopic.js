@@ -4834,6 +4834,1613 @@ To estimate the number of man-days required to complete the project.
     ],
     practiceQuestions: [],
   },
+  "number-system": {
+    description:
+      "A number system is a way of representing and expressing numerical quantities. It provides a framework for counting, measuring, and performing mathematical operations. In the context of number system aptitude tests, understanding the concepts and principles of number systems is important. It allows individuals to solve numerical problems efficiently and accurately.",
+    realLife: [
+      {
+        id: 1,
+        title: "Banking and Finance",
+        content:
+          "Number systems play a fundamental role in banking and finance. From calculating interest rates, managing accounts, and performing financial analysis, understanding number systems is essential. Decimal and binary systems are commonly used in financial transactions and data representation.",
+      },
+      {
+        id: 2,
+        title: "Measurement and Engineering",
+        content:
+          "Number systems are used extensively in measurement and engineering fields. Whether it's converting units of length, weight, or time, or working with scientific notation, engineers and scientists rely on number systems to make precise calculations and measurements.",
+      },
+      {
+        id: 3,
+        title: "Data Analysis and Statistics",
+        content:
+          "Number systems are vital in data analysis and statistics. Analyzing and interpreting data often involves working with different number systems to perform calculations, measure central tendencies, and calculate probabilities. Statistical software and programming languages employ number systems to process and manipulate large datasets efficiently.",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "hcf-and-lcm": {
+    description:
+      "The Highest Common Factor (HCF) is defined as the Highest Common Factor found in two or more numbers. Similarly, the lowest number is a Least Common Multiple (LCM) of the given numbers.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "Consider a room with dimensions 48 x 56. What is the minimum number of identical square tiles we can tile the room?",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Assume you have ropes of different lengths(e.g. 100m, 150m, 175m), and you need to cut them into small pieces of equal lengths.",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "What length would you choose to cut so that you have all the ropes of maximum lengths without leaving any spare?",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "average": {
+    description:
+      "The derived 'central' value of a set of numbers is the Average. 'Average' denotes the 'middle' or 'centre' position. In layman's terms, an Average is a value that represents a normal representation of a set of data.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "Higher education institutions and employers establish qualifying standards to choose the best applicants. Based on education, they search for average marks in a group of courses to narrow down the list of applicants.",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Financial experts can establish a budget for the following year using the previous year's spending. The average spending value also helps to determine how much money may be saved in a year.",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "Average goals per match, average runs scored by a batter, and other variables are used by statisticians to discern patterns in athletic performance.",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "arithmetic-progression": {
+    description:
+      "Arithmetic progression, or arithmetic sequence, is a numerical series in which the difference between consecutive terms is constant. Arithmetic progression problems require students to identify the next or missing term.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "When you are at a bus stop waiting for a bus. Provided that traffic moves at a steady speed, you can estimate when the next bus will arrive.",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "A taxi ride has an arithmetic progression as well. When you take a taxi, you will be charged an initial fee followed by a per hour or per kilometre charge.",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "If two individuals approach a spot at periodic intervals and the periods differ, we can estimate whether they will cross and at which time.",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "simple-interest": {
+    description:
+      "Simple interest is determined by multiplying the daily interest rate by the principal by the number of days elapsed between payments. It is a simple and effective method of calculating the returns on a given principal amount.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "Imagine you purchase stocks in a company named ITC for Rs.1,000,000, and the business pays a 10% yearly dividend. In how many years would you earn approximately twice the money in returns?",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Consider that you have lent Rs.2,00,000 to someone at an interest rate of 2% S.I per month. How much money will you receive as interest at the end of 8 months?",
+      },
+      // {
+      //   id: 3,
+      //   title: "",
+      //   content:
+      //     "If two individuals approach a spot at periodic intervals and the periods differ, we can estimate whether they will cross and at which time.",
+      // },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "ratio-and-proportion": {
+    description:
+      "A Ratio is a comparison of two quantities. A Proportion is an equality of two ratios.When comparing two numbers of the same type, the ratio is employed.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "The grocery shop is an excellent source of real-world ratios. When comparing the prices of various items, you can easily illustrate ratios by comparing two different prices.",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Ratios are also used in cooking. The proportions of various ingredients in recipes are critical for preparing the majority of meals.",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "To go 30 kilometres, a vehicle requires a particular amount of fuel. The unitary technique can now be used to estimate the quantity of fuel needed for a car to go 90 kilometres. Similarly, the distance that the vehicle can travel with 10 litres of fuel can be calculated.",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "partnership": {
+    description:
+      "When two or more individuals put their money or enter into a conventional arrangement, they are referred to as Partners, and their connection is referred to as a Partnership.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "Imagine you and your friend started a business. You invested 10 lakh, while your friend invested 5 lakh. The business made a profit of Rs. 12 lakhs. What would be the split of the profits?",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Ajay and Suresh contributed Rs. 8,000 and Rs. 1,000 in a company, respectively. After seven months, one investor, Manoj, followed them with a Rs. 6,000 investment. What returns would Ajay, Suresh, and Manoj receive if the total profit at the completion of three years is Rs. 19,660?",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "Ram, George, and Atishay made an investment in a company and contributed Rs. 5000, Rs. 3000, and Rs. 7,200, respectively, with the contract that each would obtain 5% on their respective investments. And that the remainder of the company's profit, if any, would be divided among them in the proportion of the sum originally advanced. The company's total profit was Rs. 20,000; what was Ram's portion of the overall profit?",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "mixture-and-alligation": {
+    description:
+      "A Mixture is mixing two or more things together, and Alligation helps us to find the ratio in which the ingredients/ things have been mixed and at what price they are sold to earn a profit or incur a loss.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          "Imagine that you need to make tea. You have milk, but not enough for four people. You must now combine 60% milk and 40% water. How do you make tea in the right proportions without ruining the taste?",
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Imagine we have two bottles of juice mixes, one with a juice concentration of 80% and the other with a juice concentration of 20%. How will you provide juice with a 50% concentration to your visitor?",
+      },
+      // {
+      //   id: 3,
+      //   title: "",
+      //   content:
+      //     "Ram, George, and Atishay made an investment in a company and contributed Rs. 5000, Rs. 3000, and Rs. 7,200, respectively, with the contract that each would obtain 5% on their respective investments. And that the remainder of the company's profit, if any, would be divided among them in the proportion of the sum originally advanced. The company's total profit was Rs. 20,000; what was Ram's portion of the overall profit?",
+      // },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "chain-rule": {
+    description:
+      "The Chain Rule can be used in questions that include two or more elements. With the exception of one element, which has one part missing, each element contains two figures. By using subsequent comparison, the chain rule is utilised to determine this missing component of an element.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          `"Real-life examples where the concept of Chain Rule is involved are:
+Construction projects.
+
+Addressing the Compound Interest problems promptly and accurately.
+
+Estimation of the family budget.
+
+Total class hours at school and college.
+
+To estimate the number of man-days required to complete the project.
+
+`,
+      },
+      // {
+      //   id: 2,
+      //   title: "",
+      //   content:
+      //     "Imagine we have two bottles of juice mixes, one with a juice concentration of 80% and the other with a juice concentration of 20%. How will you provide juice with a 50% concentration to your visitor?",
+      // },
+      // {
+      //   id: 3,
+      //   title: "",
+      //   content:
+      //     "Ram, George, and Atishay made an investment in a company and contributed Rs. 5000, Rs. 3000, and Rs. 7,200, respectively, with the contract that each would obtain 5% on their respective investments. And that the remainder of the company's profit, if any, would be divided among them in the proportion of the sum originally advanced. The company's total profit was Rs. 20,000; what was Ram's portion of the overall profit?",
+      // },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "time-and-work": {
+    description:
+      "Work is defined as something which has an effect or outcome. Work is always seen as a whole or as a single value. There is a correlation between time-speed-distance problems and work.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          `It will assist us in determining the time required to accomplish a task and the corresponding wages to be paid in relation to the individual effort undertaken`,
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Estimate the amount of time, money, and food that must be prepared if you are organising a celebration or dinner",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "To calculate the number of units produced at a manufacturing facility, the time required to finish production, and the overall time and budget for building projects.",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "races-and-games": {
+    description:
+      "A Race is a challenge in which contestants must complete a specific distance in the shortest amount of time. Races and games are a subtopic of Time, Speed, and Distance.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          `In the August 2022 Formula One race, Max Verstappen (first) beat S. Pérez by 17.84 seconds. The results that we see at the end of the race are generally determined by the time taken by the winner as well as other participants. For example, the runner-up took 17.8 seconds longer to complete the race. The second runner-up took an additional 26.88 seconds to complete the race.`,
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "It is also used to evaluate the performance of athletes. Assume that in the first week, athlete A takes 10 minutes to run 1000 metres. He only takes 9 minutes to cover the 1000 metre distance next week. Athlete A performance has clearly increased.",
+      },
+      // {
+      //   id: 3,
+      //   title: "",
+      //   content:
+      //     "To calculate the number of units produced at a manufacturing facility, the time required to finish production, and the overall time and budget for building projects.",
+      // },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
+  "logarithm": {
+    description:
+      "The logarithm is the opposite of exponentiation as a function. That is, the logarithm of a given integer x is the exponent to which another set number, the base b, must be increased in order to generate x.",
+    realLife: [
+      {
+        id: 1,
+        title: "",
+        content:
+          `Logarithms are useful in finance when dealing with continuous interest rate accumulation.`,
+      },
+      {
+        id: 2,
+        title: "",
+        content:
+          "Logarithmic scales are mostly utilised in the measurement of the Richter scale in earthquakes.",
+      },
+      {
+        id: 3,
+        title: "",
+        content:
+          "It is a logarithmic scale whenever you refer to something in db (decibels), such as loudness, WiFi signal intensity, etc.",
+      },
+    ],
+    concepts: {
+      des: "Number system concepts form the foundation of mathematics and are essential for solving a wide range of mathematical problems. Understanding the fundamental concepts of number system is essential for students to excel in their placement examinations.",
+      subConcepts: [
+        {
+          id: 1,
+          title: "Number Bases",
+          content:
+            "Number bases refer to the positional notation systems used to represent numbers. The most commonly used base is the decimal system (base-10), but there are other bases like binary (base-2), octal (base-8), and hexadecimal (base-16). Each base has a set of digits and a positional value system.",
+        },
+        {
+          id: 2,
+          title: "Operations on Number Systems",
+          content:
+            "The number system allows for various operations, including addition, subtraction, multiplication, and division. These operations are performed based on the rules and properties of the specific number system being used.",
+        },
+        {
+          id: 3,
+          title: "Decimal System",
+          content:
+            "The decimal system, also known as the base-10 system, is the most commonly used number system. It uses ten digits (0-9) to represent numbers. Each digit's position in a number carries a value based on powers of 10.<br>For example :<p>The number 352 is interpreted as 3 × 10^2 + 5 × 10^1 + 2 × 10^0.</p>",
+        },
+      ],
+    },
+    formulae: "Theme Detection formulae here...",
+    practiceQuestions: [
+      {
+
+        id: 1,
+        template: "Which of the following is not a prime number?\n\nA) 91\nB) 97\nC) 79\nD) 59",
+        variables: {},
+        correctAnswerFormula: "91",
+        optionsFormula: [
+          "91",
+          "97",
+          "79",
+          "59"
+        ],
+        explanationTemplate: `To determine which number is not a prime number, we need to check the divisibility of each option:
+        
+          - 91: 91 is not a prime number because it can be divided by 7 (91 = 7 * 13).
+          - 97: 97 is a prime number because it has no divisors other than 1 and itself.
+          - 79: 79 is a prime number because it has no divisors other than 1 and itself.
+          - 59: 59 is a prime number because it has no divisors other than 1 and itself.
+        
+          Therefore, the correct answer is 91, as it is the only number that is not prime.
+          `
+
+        ,
+      },
+      {
+        id: 2,
+        template:
+          "A can complete a piece of work in {{A_days}} days, and B can complete the same work in {{B_days}} days. If they work together for {{work_days}} days, what fraction of the work is left?",
+        variables: {
+          A_days: [10, 12, 14, 16, 18],
+          B_days: [14, 16, 18, 20, 24],
+          work_days: [3, 4, 5, 6, 7],
+        },
+        correctAnswerFormula: "1 - (work_days / A_days + work_days / B_days)",
+        optionsFormula: [
+          "1 - (work_days / A_days + work_days / B_days) +1",
+          "1 - (work_days / A_days + work_days / B_days)",
+          "1 - (work_days / A_days + work_days / B_days) +3",
+          "1 - (work_days / A_days + work_days / B_days) +4",
+        ],
+        explanationTemplate: `
+To determine the fraction of work left after A and B work together for {{work_days}} days, we first find their combined work rate. A's work rate is 1/{{A_days}} of the work per day, and B's work rate is 1/{{B_days}} of the work per day.<br><br>
+
+Combined, A and B can complete (1/{{A_days}} + 1/{{B_days}}) of the work per day.<br><br>
+
+In {{work_days}} days, they can complete {{work_days}} * (1/{{A_days}} + 1/{{B_days}}) of the work.<br><br>
+
+The fraction of the work left is therefore: 1 - ({{work_days}} * (1/{{A_days}} + 1/{{B_days}})) = {{final_answer}}.<br><br>
+
+Therefore, the fraction of work left is {{final_answer}}.<br><br>
+`,
+      },
+      {
+        id: 3,
+        template:
+          "A and B can do a piece of work in {{AB_days}} days, B and C can do the same work in {{BC_days}} days, and A and C can do it in {{AC_days}} days. How long will it take for A, B, and C to complete the work together?",
+        variables: {
+          AB_days: [6, 8, 10, 12, 14],
+          BC_days: [8, 10, 12, 14, 16],
+          AC_days: [10, 12, 14, 16, 18],
+        },
+        correctAnswerFormula: "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+        optionsFormula: [
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +1",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days)",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +3",
+          "1 / (1 / AB_days + 1 / BC_days + 1 / AC_days) +4",
+        ],
+        explanationTemplate: `
+To determine how long it will take for A, B, and C to complete the work together, we need to find their combined work rate.<br><br>
+
+The work rate for A and B together is 1/{{AB_days}} of the work per day.<br>
+The work rate for B and C together is 1/{{BC_days}} of the work per day.<br>
+The work rate for A and C together is 1/{{AC_days}} of the work per day.<br><br>
+Using the principle of inclusion-exclusion, the combined work rate of A, B, and C is given by:<br>
+
+1/(1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}).<br><br>
+
+So, A, B, and C together can complete the work in 1 / (1/{{AB_days}} + 1/{{BC_days}} + 1/{{AC_days}}) = {{final_answer}} days.<br><br>
+
+Therefore, A, B, and C together can complete the work in {{final_answer}} days.<br><br>
+`,
+      },
+    ],
+  },
 };
 
 export default quantitativeTopic;
