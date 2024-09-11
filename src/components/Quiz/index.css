@@ -1,0 +1,35 @@
+.button-group1 {
+  margin-top: 30px;
+  align-self: center;
+  margin-right: 65px;
+}
+
+.tick {
+  color: green;
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+
+.cross {
+  color: red;
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+
+.submit-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.submit-section button {
+  border: none;
+  color: white;
+  background-color: rgb(27, 120, 250);
+  padding: 10px 25px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ const topics = [
   "Time speed and Distance",
   "Number Series",
   "Percentages",
-  "Ratios-and-Proportions",
+  "Ratios and Proportions",
   "Number System",
   "HCF and LCM",
   "Average",

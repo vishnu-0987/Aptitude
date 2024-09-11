@@ -67,7 +67,7 @@ const TopicPage = () => {
       <Header />
       <div className="topic-sub-container">
         <div className="left-container">
-          <img src={`${process.env.PUBLIC_URL}/${topic}pic.jpg`} alt="Clock" />
+          <img src={`/Assets/${topic}pic.jpg`} alt="Clock" />
           <p>{topicDescription[topic]}</p>
           <div className="buttons-container">
             <button
@@ -99,7 +99,7 @@ const TopicPage = () => {
           <div className="bottom-content-container">{renderBottom()}</div>
         </div>
         <img
-          src={`${process.env.PUBLIC_URL}/${topic}pic1.jpg`}
+          src={`/Assets/${topic}pic1.jpg`}
           alt="time pic"
           className="right-pic"
         />

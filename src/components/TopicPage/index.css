@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
+  width: 85%;
   align-items: center;
   font-family: "Poppins";
   margin-top: 50px;
@@ -23,6 +23,7 @@
 .left-container p {
   text-align: justify;
   margin-bottom: 20px;
+  margin-right: 50px;
 }
 
 .left-container img {
@@ -33,7 +34,7 @@
 
 .buttons-container {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin-top: 15px;
 }
 
@@ -58,17 +59,17 @@
 }
 
 .right-pic {
-  height: 220px;
-  width: 350px;
+  height: 150px;
+  width: 250px;
   top: 100px;
   right: 40px;
   position: sticky;
-  margin-left: 50px;
   align-self: flex-start;
 }
 
 .bottom-content-container {
   margin-top: 50px;
+  width: 100%;
 }
 
 .buttons-container button.selectedCat {

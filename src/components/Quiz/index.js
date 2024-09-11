@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
-import topicsData from "../../topicsData";
 import quantitativeTopic from "../../quantitativeTopic";
+import topicsData from "../../topicsData";
 import "./index.css";
-import Pagination from "../Pagination";
+import Modal from "../Modal";
 
-const Practice = (props) => {
+const Quiz = (props) => {
+  const capitalizeTopic = (topic) => {
+    return topic
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
   const { topic, main } = props;
   let jsonData;
   if (main === "logical") {
@@ -14,16 +21,15 @@ const Practice = (props) => {
   }
 
   const { practiceQuestions } = jsonData;
-  const [practiceModels, setPracticeModels] = useState([]);
-  const [isWorkSpace, setWorkSpace] = useState({});
+  const [quizQuestions, setQuizQuestions] = useState([]);
   const [selectedOpt, setSelectedOpt] = useState({});
   const [submittedOpt, setSubmittedOpt] = useState({});
+  const [isWorkSpace, setWorkSpace] = useState({});
   const [errMsg, setErrMsg] = useState({});
+  const [score, setScore] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [view, setView] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState({});
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const questionsPerPage = 5;
+  const [showModal, setShowModal] = useState(false);
 
   const toggleWorkSpace = (id) => {
     setWorkSpace((prev) => ({
@@ -51,26 +57,23 @@ const Practice = (props) => {
     }));
   };
 
-  const submitButton = (id, corr) => {
-    setIsSubmitted((prev) => ({
-      ...prev,
-      [id]: !prev.id,
-    }));
-    if (selectedOpt[id]) {
-      setErrMsg((prev) => ({
-        ...prev,
-        [id]: false,
-      }));
-      setSubmittedOpt((prev) => ({
-        ...prev,
-        [id]: selectedOpt[id] === corr ? "correct" : "incorrect",
-      }));
-    } else {
-      setErrMsg((prev) => ({
-        ...prev,
-        [id]: true,
-      }));
-    }
+  const submitQuiz = () => {
+    let totalScore = 0;
+    const submittedAnswers = {};
+    quizQuestions.forEach((item) => {
+      submittedAnswers[item.id] = selectedOpt[item.id];
+      if (selectedOpt[item.id] === item.correctAnswer) {
+        totalScore += 1;
+      }
+    });
+    setScore(totalScore);
+    setSubmittedOpt(submittedAnswers);
+    setIsSubmitted(true);
+    setShowModal(true); // Show the modal when quiz is submitted
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const viewAnswer = (id) => {
@@ -89,7 +92,7 @@ const Practice = (props) => {
 
   useEffect(() => {
     window.scroll(0, 250);
-  }, [currentPage]);
+  }, []);
 
   useEffect(() => {
     function getRandomValue(min, max) {
@@ -152,14 +155,12 @@ const Practice = (props) => {
     }
 
     function generateUniqueOptions(formulaList, values, correctAnswer) {
-      console.log(correctAnswer);
       const optionsSet = new Set();
       const options = [];
 
       // Add the correct answer first
       optionsSet.add(correctAnswer);
       options.push(correctAnswer);
-      // console.log("vishnu");
 
       // Generate other options
       for (let formula of formulaList) {
@@ -176,7 +177,6 @@ const Practice = (props) => {
         const randomOption = Math.floor(
           Math.abs(Math.random() * correctAnswer)
         );
-        console.log(randomOption);
         if (!optionsSet.has(randomOption)) {
           optionsSet.add(randomOption);
           options.push(randomOption);
@@ -187,7 +187,6 @@ const Practice = (props) => {
     }
 
     if (main === "aptitude") {
-      //console.log(jsonData);
       const generatedQuestions = practiceQuestions
         .map((q) => {
           const questions = [];
@@ -230,72 +229,53 @@ const Practice = (props) => {
         })
         .flat();
 
-      setPracticeModels(generatedQuestions);
+      setQuizQuestions(shuffleArray(generatedQuestions));
     } else {
-      setPracticeModels(practiceQuestions);
+      setQuizQuestions(shuffleArray(practiceQuestions));
     }
   }, [topic]);
 
-  const indexOfLastQuestion = currentPage * questionsPerPage;
-  const indexOfFirstQuestion = indexOfLastQuestion - questionsPerPage;
-  const currentQuestions = practiceModels.slice(
-    indexOfFirstQuestion,
-    indexOfLastQuestion
-  );
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   return (
     <div className="practice-container">
-      <h1>Practice Questions</h1>
-      {currentQuestions.map((item, index) => (
+      <h1>{capitalizeTopic(topic)} Quiz</h1>
+      {quizQuestions.map((item, index) => (
         <div className="each-question" key={item.id}>
           <p>
-            Question {index + 1 + indexOfFirstQuestion} of{" "}
-            {practiceModels.length}
+            Question {index + 1} of {quizQuestions.length}
           </p>
           <h3>{item.question}</h3>
           <div className="option-grid">
-            {item.options.map((opt, index) => (
-              <button
-                key={index}
-                className={`opt-btn ${
-                  selectedOpt[item.id] === opt ? "opt-sel" : ""
-                } ${
-                  submittedOpt[item.id] &&
-                  selectedOpt[item.id] === opt &&
-                  (submittedOpt[item.id] === "correct"
-                    ? "correct"
-                    : "incorrect")
-                } ${
-                  view[item.id] && opt === item.correctAnswer
-                    ? "correct"
-                    : "opt-btn"
-                }`}
-                type="button"
-                onClick={() => changeOption(item.id, opt)}
-                disabled={isSubmitted[item.id]}
-              >
-                {opt}
-              </button>
-            ))}
+            {item.options.map((opt, optIndex) => {
+              const isSelected = selectedOpt[item.id] === opt;
+              const isCorrect = opt === item.correctAnswer;
+              const isUserAnswer = isSubmitted && submittedOpt[item.id] === opt;
+
+              return (
+                <button
+                  key={optIndex}
+                  className={`opt-btn 
+    ${isSubmitted && isUserAnswer ? (isCorrect ? "correct" : "incorrect") : ""}
+    ${!isSubmitted && isSelected ? "opt-sel" : ""}`}
+                  type="button"
+                  onClick={() => changeOption(item.id, opt)}
+                  disabled={isSubmitted} // Disable options after submission
+                >
+                  {opt}
+                </button>
+              );
+            })}
           </div>
           <div className="button-group">
-            <button
-              type="submit"
-              id="submit"
-              onClick={() => submitButton(item.id, item.correctAnswer)}
-            >
-              Submit
-            </button>
+            {isSubmitted && (
+              <button
+                type="submit"
+                id={view[item.id] ? "hide" : "answer"}
+                onClick={() => viewAnswer(item.id)}
+              >
+                {view[item.id] ? "Hide Answer" : "View Answer"}
+              </button>
+            )}
 
-            <button
-              type="submit"
-              id={view[item.id] ? "hide" : "answer"}
-              onClick={() => viewAnswer(item.id)}
-            >
-              {view[item.id] ? "Hide Answer" : "View Answer"}
-            </button>
             <button
               type="button"
               id="workspace"
@@ -309,11 +289,9 @@ const Practice = (props) => {
               *Please select an option
             </p>
           )}
-
           {isWorkSpace[item.id] && (
             <textarea rows={15} className="textarea"></textarea>
           )}
-
           {view[item.id] && (
             <div
               className="explanation"
@@ -322,14 +300,22 @@ const Practice = (props) => {
           )}
         </div>
       ))}
-      <Pagination
-        questionsPerPage={questionsPerPage}
-        totalQuestions={practiceModels.length}
-        paginate={paginate}
-        currentPage={currentPage}
-      />
+      {quizQuestions.length > 0 && (
+        <div className="submit-section">
+          <button type="button" onClick={submitQuiz}>
+            Submit Quiz
+          </button>
+        </div>
+      )}
+
+      {/* Render the Modal with the score */}
+      <Modal show={showModal} onClose={closeModal}>
+        <h2>
+          Your Score: {score} / {quizQuestions.length}
+        </h2>
+      </Modal>
     </div>
   );
 };
 
-export default Practice;
+export default Quiz;
